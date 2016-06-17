@@ -62,6 +62,159 @@
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Service References\AtlasjetServiceReference\BurakWcfService.AtlasjetServiceReference.addPassengerResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\AtlasjetServiceReference\BurakWcfService.AtlasjetServiceReference.addPassengerV2Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\AtlasjetServiceReference\BurakWcfService.AtlasjetServiceReference.AirportsData.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\AtlasjetServiceReference\BurakWcfService.AtlasjetServiceReference.airportsListResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\AtlasjetServiceReference\BurakWcfService.AtlasjetServiceReference.AvailabilityData.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\AtlasjetServiceReference\BurakWcfService.AtlasjetServiceReference.availabilityResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\AtlasjetServiceReference\BurakWcfService.AtlasjetServiceReference.availabilityV3Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\AtlasjetServiceReference\BurakWcfService.AtlasjetServiceReference.availabilityV4Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\AtlasjetServiceReference\BurakWcfService.AtlasjetServiceReference.BookingData.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\AtlasjetServiceReference\BurakWcfService.AtlasjetServiceReference.bookingResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\AtlasjetServiceReference\BurakWcfService.AtlasjetServiceReference.CancelPnrData.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\AtlasjetServiceReference\BurakWcfService.AtlasjetServiceReference.CancelPnrPriceData.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\AtlasjetServiceReference\BurakWcfService.AtlasjetServiceReference.cancelPnrPriceResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\AtlasjetServiceReference\BurakWcfService.AtlasjetServiceReference.cancelPnrResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\AtlasjetServiceReference\BurakWcfService.AtlasjetServiceReference.FareQuoteData.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\AtlasjetServiceReference\BurakWcfService.AtlasjetServiceReference.faresResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\AtlasjetServiceReference\BurakWcfService.AtlasjetServiceReference.JetmilInfoData.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\AtlasjetServiceReference\BurakWcfService.AtlasjetServiceReference.jetmilInfoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\AtlasjetServiceReference\BurakWcfService.AtlasjetServiceReference.LimitInfoData.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\AtlasjetServiceReference\BurakWcfService.AtlasjetServiceReference.limitInfoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\AtlasjetServiceReference\BurakWcfService.AtlasjetServiceReference.MaxServiceFeeData.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\AtlasjetServiceReference\BurakWcfService.AtlasjetServiceReference.maxServiceFeeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\AtlasjetServiceReference\BurakWcfService.AtlasjetServiceReference.OpenJawAirportsData.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\AtlasjetServiceReference\BurakWcfService.AtlasjetServiceReference.openJawAirportsListResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\AtlasjetServiceReference\BurakWcfService.AtlasjetServiceReference.PreBookingData.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\AtlasjetServiceReference\BurakWcfService.AtlasjetServiceReference.preBookingResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\AtlasjetServiceReference\BurakWcfService.AtlasjetServiceReference.PsgrForTicketnumberData.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\AtlasjetServiceReference\BurakWcfService.AtlasjetServiceReference.psgrForTicketNumberResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\AtlasjetServiceReference\BurakWcfService.AtlasjetServiceReference.ReferenceData.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\AtlasjetServiceReference\BurakWcfService.AtlasjetServiceReference.TimeTableData.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\AtlasjetServiceReference\BurakWcfService.AtlasjetServiceReference.timetableResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\AtlasjetServiceReference\BurakWcfService.AtlasjetServiceReference.ToAirportsData.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\AtlasjetServiceReference\BurakWcfService.AtlasjetServiceReference.toAirportsListResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Service References\AtlasjetServiceReference\configuration91.svcinfo" />
+    <None Include="Service References\AtlasjetServiceReference\configuration.svcinfo" />
+    <None Include="Service References\AtlasjetServiceReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="Service References\BoraJetServiceReference\BurakWcfService.BoraJetServiceReference.AvailabilityResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\BoraJetServiceReference\BurakWcfService.BoraJetServiceReference.BookingResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\BoraJetServiceReference\BurakWcfService.BoraJetServiceReference.CalculateServiceChargeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\BoraJetServiceReference\BurakWcfService.BoraJetServiceReference.CancelReservationResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\BoraJetServiceReference\BurakWcfService.BoraJetServiceReference.FareDisplayResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\BoraJetServiceReference\BurakWcfService.BoraJetServiceReference.OTA_AirAvailRSType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\BoraJetServiceReference\BurakWcfService.BoraJetServiceReference.OTA_AirBookRSType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\BoraJetServiceReference\BurakWcfService.BoraJetServiceReference.OTA_AirFareDisplayRSType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\BoraJetServiceReference\BurakWcfService.BoraJetServiceReference.OTA_CancelRSType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\BoraJetServiceReference\BurakWcfService.BoraJetServiceReference.OTA_PingRSType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\BoraJetServiceReference\BurakWcfService.BoraJetServiceReference.OTA_ServiceChargeRSType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\BoraJetServiceReference\BurakWcfService.BoraJetServiceReference.PingResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\BoraJetServiceReference\BurakWcfService.BoraJetServiceReference.ReadReservationResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\BoraJetServiceReference\BurakWcfService.BoraJetServiceReference.TicketReservationResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Service References\BoraJetServiceReference\configuration91.svcinfo" />
+    <None Include="Service References\BoraJetServiceReference\configuration.svcinfo" />
+    <None Include="Service References\BoraJetServiceReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
     <Content Include="Service References\OnurAirCraneOTAService\BurakWcfService.OnurAirCraneOTAService.AvailabilityResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
@@ -104,6 +257,8 @@
     <Content Include="Service References\OnurAirCraneOTAService\BurakWcfService.OnurAirCraneOTAService.TicketReservationResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
+    <None Include="Service References\AtlasjetServiceReference\Atlasjet.wsdl" />
+    <None Include="Service References\BoraJetServiceReference\CraneOTAService.wsdl" />
     <None Include="Service References\OnurAirCraneOTAService\configuration91.svcinfo" />
     <None Include="Service References\OnurAirCraneOTAService\configuration.svcinfo" />
     <None Include="Service References\OnurAirCraneOTAService\Reference.svcmap">
@@ -118,7 +273,18 @@
     <Compile Include="IServiceHello.cs" />
     <Compile Include="Models\Account.cs" />
     <Compile Include="Models\AccountModel.cs" />
+    <Compile Include="Models\AirPort.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service References\AtlasjetServiceReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\BoraJetServiceReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <Compile Include="Service References\OnurAirCraneOTAService\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -144,6 +310,8 @@
     <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <ItemGroup>
+    <WCFMetadataStorage Include="Service References\AtlasjetServiceReference\" />
+    <WCFMetadataStorage Include="Service References\BoraJetServiceReference\" />
     <WCFMetadataStorage Include="Service References\OnurAirCraneOTAService\" />
   </ItemGroup>
   <PropertyGroup>
