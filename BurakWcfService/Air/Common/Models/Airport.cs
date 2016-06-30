@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BurakWcfService.Models
+namespace BurakWcfService.Air.Models
 {
     public class Airport
     {

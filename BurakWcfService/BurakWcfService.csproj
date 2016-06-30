@@ -161,6 +161,10 @@
     <Content Include="Service References\AtlasjetServiceReference\BurakWcfService.AtlasjetServiceReference.toAirportsListResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
     <None Include="Service References\AtlasjetServiceReference\configuration91.svcinfo" />
     <None Include="Service References\AtlasjetServiceReference\configuration.svcinfo" />
     <None Include="Service References\AtlasjetServiceReference\Reference.svcmap">
@@ -265,16 +269,107 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
+    <Content Include="Service References\SunExpressServiceReference\BurakWcfService.SunExpressServiceReference.AvailabilityResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\SunExpressServiceReference\BurakWcfService.SunExpressServiceReference.BookingResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\SunExpressServiceReference\BurakWcfService.SunExpressServiceReference.CancelReservationResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\SunExpressServiceReference\BurakWcfService.SunExpressServiceReference.FareDisplayResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\SunExpressServiceReference\BurakWcfService.SunExpressServiceReference.OTA_AirAvailRSType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\SunExpressServiceReference\BurakWcfService.SunExpressServiceReference.OTA_AirBookRSType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\SunExpressServiceReference\BurakWcfService.SunExpressServiceReference.OTA_AirFareDisplayRSType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\SunExpressServiceReference\BurakWcfService.SunExpressServiceReference.OTA_CancelRSType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\SunExpressServiceReference\BurakWcfService.SunExpressServiceReference.OTA_PingRSType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\SunExpressServiceReference\BurakWcfService.SunExpressServiceReference.PingResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\SunExpressServiceReference\BurakWcfService.SunExpressServiceReference.ReadReservationResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\SunExpressServiceReference\BurakWcfService.SunExpressServiceReference.TicketReservationResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Service References\SunExpressServiceReference\configuration91.svcinfo" />
+    <None Include="Service References\SunExpressServiceReference\configuration.svcinfo" />
+    <None Include="Service References\SunExpressServiceReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
     <Content Include="ServiceHello.svc" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Air\SunExpress\dsada.cs" />
+    <Compile Include="Air\SunExpress\Services\Fare\SunExpress.cs" />
+    <Compile Include="Web References\SunExpressXMLServiceReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
     <Content Include="App_Code\Authentication\CustomValidator.cs" />
+    <Compile Include="Air\AtlasJet\Services\Fare\FareListRequest.cs" />
+    <Compile Include="Air\AtlasJet\Services\Fare\FareListResponse.cs" />
+    <Compile Include="Air\AtlasJet\Services\Fare\FareService.cs" />
+    <Compile Include="Air\AtlasJet\Services\Airport\AirportListRequest.cs" />
+    <Compile Include="Air\AtlasJet\Services\Airport\AirportListResponse.cs" />
+    <Compile Include="Air\AtlasJet\Services\Airport\AirportService.cs" />
+    <Compile Include="Air\AtlasJet\Services\AtlasJet.cs" />
+    <Compile Include="Air\Common\Enum.cs" />
+    <Compile Include="Air\Common\IAirService.cs" />
+    <Compile Include="Air\Common\Models\AvailabilityFight.cs" />
+    <Compile Include="Air\Common\Models\Booking.cs" />
+    <Compile Include="Air\Common\Models\Fare.cs" />
+    <Compile Include="Air\Common\Models\FlightTripType.cs" />
+    <Compile Include="Air\Common\Services\Models\BookingRetrieveRequest.cs" />
+    <Compile Include="Air\Common\Services\Models\BookingRetrieveResponse.cs" />
+    <Compile Include="Air\Common\Services\Models\AvailabilityFightListRequest.cs" />
+    <Compile Include="Air\Common\Services\Models\AirportListRequest.cs" />
+    <Compile Include="Air\Common\Services\Models\AvailabilityFightListResponse.cs" />
+    <Compile Include="Air\Common\Services\Models\AirportListResponse.cs" />
+    <Compile Include="Air\Common\Services\Models\FareListRequest.cs" />
+    <Compile Include="Air\Common\Services\Models\FareListResponse.cs" />
+    <Compile Include="Air\Common\Services\Models\ListRequest.cs" />
+    <Compile Include="Air\Common\Services\Models\ListResponse.cs" />
+    <Compile Include="Air\Common\Services\Models\RetrieveRequest.cs" />
+    <Compile Include="Air\Common\Services\Models\RetrieveResponse.cs" />
+    <Compile Include="Air\Common\Services\Models\ServiceError.cs" />
+    <Compile Include="Air\Common\Services\Models\ServiceRequest.cs" />
+    <Compile Include="Air\Common\Services\Models\ServiceResponse.cs" />
+    <Compile Include="Air\SunExpress\Services\Airport\AirportListRequest.cs" />
+    <Compile Include="Air\SunExpress\Services\Airport\AirportListResponse.cs" />
+    <Compile Include="Air\SunExpress\Services\Airport\AirportService.cs" />
+    <Compile Include="Air\SunExpress\Services\SunExpress.cs" />
+    <Compile Include="Air\SunExpress\Services\Fare\FareListRequest.cs" />
+    <Compile Include="Air\SunExpress\Services\Fare\FareListResponse.cs" />
+    <Compile Include="Air\SunExpress\Services\Fare\FareService.cs" />
     <Compile Include="IServiceHello.cs" />
     <Compile Include="Models\Account.cs" />
     <Compile Include="Models\AccountModel.cs" />
-    <Compile Include="Models\AirPort.cs" />
+    <Compile Include="Air\Common\Models\FlightDirection.cs" />
+    <Compile Include="Air\Common\Models\Flight.cs" />
+    <Compile Include="Air\Common\Models\Airport.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
     <Compile Include="Service References\AtlasjetServiceReference\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -290,15 +385,47 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
+    <Compile Include="Service References\SunExpressServiceReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <Compile Include="ServiceHello.svc.cs">
       <DependentUpon>ServiceHello.svc</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Air\AtlasJet\Enums\" />
+    <Folder Include="Air\AtlasJet\Helper\" />
+    <Folder Include="Air\AtlasJet\Models\" />
+    <Folder Include="Air\BoraJet\" />
+    <Folder Include="Air\OnurAir\" />
+    <Folder Include="Air\Websdom\" />
     <Folder Include="App_Data\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Service References\OnurAirCraneOTAService\CraneOTAService.wsdl" />
+    <None Include="Service References\SunExpressServiceReference\CraneOTAService.wsdl" />
+    <None Include="Web References\SunExpressXMLServiceReference\CraneOTAService.wsdl" />
+    <Content Include="Web References\SunExpressXMLServiceReference\OTA_AirAvailRSType.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <Content Include="Web References\SunExpressXMLServiceReference\OTA_AirBookRSType.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <Content Include="Web References\SunExpressXMLServiceReference\OTA_AirFareDisplayRSType.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <Content Include="Web References\SunExpressXMLServiceReference\OTA_CancelRSType.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <Content Include="Web References\SunExpressXMLServiceReference\OTA_PingRSType.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <Content Include="Web References\SunExpressXMLServiceReference\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </Content>
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -313,6 +440,23 @@
     <WCFMetadataStorage Include="Service References\AtlasjetServiceReference\" />
     <WCFMetadataStorage Include="Service References\BoraJetServiceReference\" />
     <WCFMetadataStorage Include="Service References\OnurAirCraneOTAService\" />
+    <WCFMetadataStorage Include="Service References\SunExpressServiceReference\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="https://ota.sunexpress.com/axis2/services/CraneOTAService%3fwsdl">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\SunExpressXMLServiceReference\</RelPath>
+      <UpdateFromURL>https://ota.sunexpress.com/axis2/services/CraneOTAService%3fwsdl</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>BurakWcfService_SunExpressXMLServiceReference_CraneOTAService</CachedSettingsPropName>
+    </WebReferenceUrl>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

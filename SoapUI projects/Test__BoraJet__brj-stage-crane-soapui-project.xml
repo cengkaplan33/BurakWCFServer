@@ -1,0 +1,1333 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project name="Test__BoraJet__brj-stage.crane" soapui-version="4.0.1" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" wsaVersion="NONE" name="CraneOTAServiceSOAP11Binding" type="wsdl" bindingName="{http://ota.paxws.otaxmlws/}CraneOTAServiceSOAP11Binding" soapVersion="1_1" anonymous="optional" definition="http://brj-stage.crane.aero/axis2/services/CraneOTAService?wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache/><con:endpoints><con:endpoint>http://brj-stage.crane.aero:80/axis2/services/CraneOTAService</con:endpoint></con:endpoints><con:operation isOneWay="false" action="/Availability" name="Availability" bindingOperationName="Availability" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://brj-stage.crane.aero:80/axis2/services/CraneOTAService</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:otab="http://otabase.otapax.otaxmlws/" xmlns:ota="http://ota.paxws.otaxmlws/" xmlns:typ="http://types.paxws.otaxmlws/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <otab:OTA_AirAvailRQ DirectFlightsOnly="?" PrimaryLangID="?" SequenceNmbr="?">
+         <ota:POS>
+            <typ:Source agentSine="?" isoCountry="?" isoCurrency="?">
+               <typ:RequestorID id="?" type="?" url="?"/>
+               <typ:BookingChannel Primary="?" Type="?"/>
+            </typ:Source>
+         </ota:POS>
+         <ota:OriginDestinationInformation>
+            <typ:DepartureDateTime>?</typ:DepartureDateTime>
+            <typ:OriginLocation LocationCode="?"/>
+            <typ:DestinationLocation LocationCode="?"/>
+         </ota:OriginDestinationInformation>
+         <ota:TravelPreferences MaxStopsQuantity="?">
+            <typ:FlightTypePref FlightType="?" PreferLevel="?"/>
+            <typ:EquipPref AirEquipType="?"/>
+            <typ:CabinPref Cabin="?" PreferLevel="?"/>
+            <typ:TicketDistribPref DistribType="?" PreferLevel="?"/>
+            <typ:BookingClassPref ResBookDesigCode="?"/>
+         </ota:TravelPreferences>
+         <ota:TravelerInfoSummary>
+            <typ:AirTravelerAvail>
+               <!--Zero or more repetitions:-->
+               <typ:PassengerTypeQuantity Code="?" Quantity="?"/>
+               <typ:temp>?</typ:temp>
+            </typ:AirTravelerAvail>
+         </ota:TravelerInfoSummary>
+      </otab:OTA_AirAvailRQ>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="/Availability"/></con:call></con:operation><con:operation isOneWay="false" action="/Booking" name="Booking" bindingOperationName="Booking" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://brj-stage.crane.aero:80/axis2/services/CraneOTAService</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:otab="http://otabase.otapax.otaxmlws/" xmlns:ota="http://ota.paxws.otaxmlws/" xmlns:typ="http://types.paxws.otaxmlws/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <otab:OTA_AirBookRQ SequenceNmbr="?" TimeStamp="?" ExtTransactionID="?">
+         <ota:POS>
+            <typ:Source agentSine="?" isoCountry="?" isoCurrency="?">
+               <typ:RequestorID id="?" type="?" url="?"/>
+               <typ:BookingChannel Primary="?" Type="?"/>
+            </typ:Source>
+         </ota:POS>
+         <ota:AirItinerary DirectionInd="?">
+            <typ:OriginDestinationOptions>
+               <!--Zero or more repetitions:-->
+               <typ:OriginDestinationOption>
+                  <!--Zero or more repetitions:-->
+                  <typ:FlightSegment ArrivalDateTime="?" DepartureDateTime="?" FlightNumber="?" JourneyDuration="?" OnTimeRate="?" ResBookDesigCode="?" ResBookDesigID="?" StopQuantity="?" Ticket="?">
+                     <typ:DepartureAirport LocationCode="?"/>
+                     <typ:ArrivalAirport LocationCode="?"/>
+                     <typ:Equipment AirEquipType="?" ChangeofGauge="?"/>
+                     <typ:MarkettingAirline CompanyShortName="?"/>
+                     <!--Zero or more repetitions:-->
+                     <typ:MarketingCabin RPH="?" CabinType="?">
+                        <typ:Meal>?</typ:Meal>
+                     </typ:MarketingCabin>
+                     <!--Zero or more repetitions:-->
+                     <typ:BookingClassAvail RPH="?" ResBookDesigCode="?" ResBookDesigQuantity="?"/>
+                     <typ:comment>?</typ:comment>
+                  </typ:FlightSegment>
+                  <typ:dummy>?</typ:dummy>
+               </typ:OriginDestinationOption>
+               <typ:dummy>?</typ:dummy>
+            </typ:OriginDestinationOptions>
+         </ota:AirItinerary>
+         <ota:TravelerInfo>
+            <!--Zero or more repetitions:-->
+            <typ:AirTraveler PassengerTypeCode="?" TicketNumber="?">
+               <typ:ProfileRef>
+                  <typ:UniqueID ID="?" URL="?" Instance="?" Type="?"/>
+               </typ:ProfileRef>
+               <typ:PersonName>
+                  <typ:NamePrefix>?</typ:NamePrefix>
+                  <typ:GivenName>?</typ:GivenName>
+                  <typ:Surname>?</typ:Surname>
+                  <typ:NameTitle>?</typ:NameTitle>
+               </typ:PersonName>
+               <typ:Telephone AreaCityCode="?" PhoneNumber="?"/>
+               <typ:Email>?</typ:Email>
+               <typ:Document BirthDate="?" DocID="?" DocIssueAuthority="?" DocIssueLocation="?" DocType="?" EffectiveDate="?" ExpireDate="?" Gender="?">
+                  <typ:DocHolderName>?</typ:DocHolderName>
+               </typ:Document>
+            </typ:AirTraveler>
+            <!--Zero or more repetitions:-->
+            <typ:SpecialReqDetails>
+               <typ:SeatRequests>
+                  <!--Zero or more repetitions:-->
+                  <ota:item FlightRefNumberRPHList="?" SeatNumber="?" TravelerRefNumberRPHList="?"/>
+               </typ:SeatRequests>
+               <typ:SpecialServiceRequests>
+                  <!--Zero or more repetitions:-->
+                  <typ:SpecialServiceRequest SSRCode="?" FlightRefNumberRPHList="?" TravelerRefNumberRPHList="?">
+                     <typ:Airline>?</typ:Airline>
+                     <typ:text>?</typ:text>
+                  </typ:SpecialServiceRequest>
+                  <typ:dummy>?</typ:dummy>
+               </typ:SpecialServiceRequests>
+            </typ:SpecialReqDetails>
+         </ota:TravelerInfo>
+         <ota:Ticketing TicketType="?"/>
+      </otab:OTA_AirBookRQ>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="/Booking"/></con:call></con:operation><con:operation isOneWay="false" action="/CalculateServiceCharge" name="CalculateServiceCharge" bindingOperationName="CalculateServiceCharge" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://brj-stage.crane.aero:80/axis2/services/CraneOTAService</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:otab="http://otabase.otapax.otaxmlws/" xmlns:ota="http://ota.paxws.otaxmlws/" xmlns:typ="http://types.paxws.otaxmlws/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <otab:OTA_ServiceChargeRQ>
+         <ota:POS>
+            <typ:Source agentSine="?" isoCountry="?" isoCurrency="?">
+               <typ:RequestorID id="?" type="?" url="?"/>
+               <typ:BookingChannel Primary="?" Type="?"/>
+            </typ:Source>
+         </ota:POS>
+         <ota:AirItinerary DirectionInd="?">
+            <typ:OriginDestinationOptions>
+               <!--Zero or more repetitions:-->
+               <typ:OriginDestinationOption>
+                  <!--Zero or more repetitions:-->
+                  <typ:FlightSegment ArrivalDateTime="?" DepartureDateTime="?" FlightNumber="?" JourneyDuration="?" OnTimeRate="?" ResBookDesigCode="?" ResBookDesigID="?" StopQuantity="?" Ticket="?">
+                     <typ:DepartureAirport LocationCode="?"/>
+                     <typ:ArrivalAirport LocationCode="?"/>
+                     <typ:Equipment AirEquipType="?" ChangeofGauge="?"/>
+                     <typ:MarkettingAirline CompanyShortName="?"/>
+                     <!--Zero or more repetitions:-->
+                     <typ:MarketingCabin RPH="?" CabinType="?">
+                        <typ:Meal>?</typ:Meal>
+                     </typ:MarketingCabin>
+                     <!--Zero or more repetitions:-->
+                     <typ:BookingClassAvail RPH="?" ResBookDesigCode="?" ResBookDesigQuantity="?"/>
+                     <typ:comment>?</typ:comment>
+                  </typ:FlightSegment>
+                  <typ:dummy>?</typ:dummy>
+               </typ:OriginDestinationOption>
+               <typ:dummy>?</typ:dummy>
+            </typ:OriginDestinationOptions>
+         </ota:AirItinerary>
+         <ota:AdultCount>?</ota:AdultCount>
+         <ota:ChildCount>?</ota:ChildCount>
+         <ota:InfantCount>?</ota:InfantCount>
+      </otab:OTA_ServiceChargeRQ>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="/CalculateServiceCharge"/></con:call></con:operation><con:operation isOneWay="false" action="/CancelReservation" name="CancelReservation" bindingOperationName="CancelReservation" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://brj-stage.crane.aero:80/axis2/services/CraneOTAService</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:otab="http://otabase.otapax.otaxmlws/" xmlns:ota="http://ota.paxws.otaxmlws/" xmlns:typ="http://types.paxws.otaxmlws/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <otab:OTA_CancelRQ SequenceNmbr="?" TimeStamp="?" CancelType="?">
+         <ota:POS>
+            <typ:Source agentSine="?" isoCountry="?" isoCurrency="?">
+               <typ:RequestorID id="?" type="?" url="?"/>
+               <typ:BookingChannel Primary="?" Type="?"/>
+            </typ:Source>
+         </ota:POS>
+         <!--1 or more repetitions:-->
+         <ota:UniqueID ID="?">
+            <typ:CompanyName Code="?"/>
+         </ota:UniqueID>
+      </otab:OTA_CancelRQ>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="/CancelReservation"/></con:call></con:operation><con:operation isOneWay="false" action="/FareDisplay" name="FareDisplay" bindingOperationName="FareDisplay" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://brj-stage.crane.aero:80/axis2/services/CraneOTAService</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:otab="http://otabase.otapax.otaxmlws/" xmlns:ota="http://ota.paxws.otaxmlws/" xmlns:typ="http://types.paxws.otaxmlws/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <otab:OTA_AirFareDisplayRQ PrimaryLangID="?" SequenceNmbr="?" TimeStamp="?">
+         <ota:POS>
+            <typ:Source agentSine="?" isoCountry="?" isoCurrency="?">
+               <typ:RequestorID id="?" type="?" url="?"/>
+               <typ:BookingChannel Primary="?" Type="?"/>
+            </typ:Source>
+         </ota:POS>
+         <ota:OriginDestinationInformation>
+            <typ:DepartureDateTime>?</typ:DepartureDateTime>
+            <typ:OriginLocation LocationCode="?"/>
+            <typ:DestinationLocation LocationCode="?"/>
+         </ota:OriginDestinationInformation>
+         <ota:SpecificFlightInfo>
+            <typ:FlightNumber>?</typ:FlightNumber>
+            <typ:BookingClassPref ResBookDesigCode="?"/>
+         </ota:SpecificFlightInfo>
+      </otab:OTA_AirFareDisplayRQ>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="/FareDisplay"/></con:call></con:operation><con:operation isOneWay="false" action="/Ping" name="Ping" bindingOperationName="Ping" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://brj-stage.crane.aero:80/axis2/services/CraneOTAService</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:otab="http://otabase.otapax.otaxmlws/" xmlns:ota="http://ota.paxws.otaxmlws/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <otab:OTA_PingRQ SequenceNmbr="?" TimeStamp="?">
+         <ota:EchoData>?</ota:EchoData>
+      </otab:OTA_PingRQ>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="/Ping"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation isOneWay="false" action="/ReadReservation" name="ReadReservation" bindingOperationName="ReadReservation" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://brj-stage.crane.aero:80/axis2/services/CraneOTAService</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:otab="http://otabase.otapax.otaxmlws/" xmlns:ota="http://ota.paxws.otaxmlws/" xmlns:typ="http://types.paxws.otaxmlws/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <otab:OTA_ReadRQ SequenceNmbr="?" TimeStamp="?">
+         <ota:POS>
+            <typ:Source agentSine="?" isoCountry="?" isoCurrency="?">
+               <typ:RequestorID id="?" type="?" url="?"/>
+               <typ:BookingChannel Primary="?" Type="?"/>
+            </typ:Source>
+         </ota:POS>
+         <ota:ReadRequests>
+            <!--Zero or more repetitions:-->
+            <typ:ReadRequest>
+               <!--Zero or more repetitions:-->
+               <typ:UniqueID ID="?">
+                  <typ:CompanyName Code="?"/>
+               </typ:UniqueID>
+               <typ:dummy>?</typ:dummy>
+            </typ:ReadRequest>
+            <typ:dummy>?</typ:dummy>
+         </ota:ReadRequests>
+      </otab:OTA_ReadRQ>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="/ReadReservation"/></con:call></con:operation><con:operation isOneWay="false" action="/TicketReservation" name="TicketReservation" bindingOperationName="TicketReservation" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://brj-stage.crane.aero:80/axis2/services/CraneOTAService</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:otab="http://otabase.otapax.otaxmlws/" xmlns:ota="http://ota.paxws.otaxmlws/" xmlns:typ="http://types.paxws.otaxmlws/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <otab:OTA_TicketReservationRQ SequenceNmbr="?" TimeStamp="?">
+         <ota:POS>
+            <typ:Source agentSine="?" isoCountry="?" isoCurrency="?">
+               <typ:RequestorID id="?" type="?" url="?"/>
+               <typ:BookingChannel Primary="?" Type="?"/>
+            </typ:Source>
+         </ota:POS>
+         <ota:BookingReferenceID ID="?">
+            <typ:CompanyName Code="?"/>
+         </ota:BookingReferenceID>
+         <ota:SpecialServiceRequests>
+            <!--Zero or more repetitions:-->
+            <typ:SpecialServiceRequest SSRCode="?" FlightRefNumberRPHList="?" TravelerRefNumberRPHList="?">
+               <typ:Airline>?</typ:Airline>
+               <typ:text>?</typ:text>
+            </typ:SpecialServiceRequest>
+            <typ:dummy>?</typ:dummy>
+         </ota:SpecialServiceRequests>
+      </otab:OTA_TicketReservationRQ>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="/TicketReservation"/></con:call></con:operation></con:interface><con:interface xsi:type="con:WsdlInterface" wsaVersion="NONE" name="CraneOTAServiceSOAP12Binding" type="wsdl" bindingName="{http://ota.paxws.otaxmlws/}CraneOTAServiceSOAP12Binding" soapVersion="1_2" anonymous="optional" definition="http://brj-stage.crane.aero/axis2/services/CraneOTAService?wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="http://brj-stage.crane.aero/axis2/services/CraneOTAService?wsdl"><con:part><con:url>http://brj-stage.crane.aero/axis2/services/CraneOTAService?wsdl</con:url><con:content><![CDATA[<wsdl:definitions targetNamespace="http://ota.paxws.otaxmlws/" xmlns:tns1="http://types.paxws.otaxmlws/" xmlns:tns2="http://otabase.otapax.otaxmlws/" xmlns:impl="http://ota.paxws.otaxmlws/" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:intf="http://ota.paxws.otaxmlws/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/">
+  <wsdl:documentation>CraneOTAService</wsdl:documentation>
+  <wsdl:types>
+    <schema attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://types.paxws.otaxmlws/" xmlns="http://www.w3.org/2001/XMLSchema" xmlns:ns1="http://schemas.xmlsoap.org/soap/encoding/">
+      <import namespace="http://ota.paxws.otaxmlws/"/>
+      <complexType name="RequestorIDType">
+        <sequence/>
+        <attribute name="id" type="xsd:string"/>
+        <attribute name="type" type="xsd:string"/>
+        <attribute name="url" type="xsd:string"/>
+      </complexType>
+      <complexType name="BookingChannelType">
+        <sequence/>
+        <attribute name="Primary" type="xsd:int"/>
+        <attribute name="Type" type="xsd:int"/>
+      </complexType>
+      <complexType name="SourceType">
+        <sequence>
+          <element name="RequestorID" nillable="true" type="tns1:RequestorIDType"/>
+          <element name="BookingChannel" nillable="true" type="tns1:BookingChannelType"/>
+        </sequence>
+        <attribute name="agentSine" type="xsd:string"/>
+        <attribute name="isoCountry" type="xsd:string"/>
+        <attribute name="isoCurrency" type="xsd:string"/>
+      </complexType>
+      <complexType name="POSType">
+        <sequence>
+          <element name="Source" nillable="true" type="tns1:SourceType"/>
+        </sequence>
+      </complexType>
+      <complexType name="LocationType">
+        <sequence/>
+        <attribute name="LocationCode" type="xsd:string"/>
+      </complexType>
+      <complexType name="OriginDestinationInformationType">
+        <sequence>
+          <element name="DepartureDateTime" nillable="true" type="xsd:string"/>
+          <element name="OriginLocation" nillable="true" type="tns1:LocationType"/>
+          <element name="DestinationLocation" nillable="true" type="tns1:LocationType"/>
+        </sequence>
+      </complexType>
+      <complexType name="FlightTypePrefType">
+        <sequence/>
+        <attribute name="FlightType" type="xsd:string"/>
+        <attribute name="PreferLevel" type="xsd:string"/>
+      </complexType>
+      <complexType name="EquipPrefType">
+        <sequence/>
+        <attribute name="AirEquipType" type="xsd:string"/>
+      </complexType>
+      <complexType name="CabinPrefType">
+        <sequence/>
+        <attribute name="Cabin" type="xsd:string"/>
+        <attribute name="PreferLevel" type="xsd:string"/>
+      </complexType>
+      <complexType name="TicketDistribPrefType">
+        <sequence/>
+        <attribute name="DistribType" type="xsd:int"/>
+        <attribute name="PreferLevel" type="xsd:string"/>
+      </complexType>
+      <complexType name="BookingClassPrefType">
+        <sequence/>
+        <attribute name="ResBookDesigCode" type="xsd:string"/>
+      </complexType>
+      <complexType name="TravelPreferencesType">
+        <sequence>
+          <element name="FlightTypePref" nillable="true" type="tns1:FlightTypePrefType"/>
+          <element name="EquipPref" nillable="true" type="tns1:EquipPrefType"/>
+          <element name="CabinPref" nillable="true" type="tns1:CabinPrefType"/>
+          <element name="TicketDistribPref" nillable="true" type="tns1:TicketDistribPrefType"/>
+          <element name="BookingClassPref" nillable="true" type="tns1:BookingClassPrefType"/>
+        </sequence>
+        <attribute name="MaxStopsQuantity" type="xsd:int"/>
+      </complexType>
+      <complexType name="PassengerTypeQuantityType">
+        <sequence/>
+        <attribute name="Code" type="xsd:string"/>
+        <attribute name="Quantity" type="xsd:int"/>
+      </complexType>
+      <complexType name="AirTravelerAvailType">
+        <sequence>
+          <element maxOccurs="unbounded" minOccurs="0" name="PassengerTypeQuantity" nillable="true" type="tns1:PassengerTypeQuantityType"/>
+          <element name="temp" type="xsd:string"/>
+        </sequence>
+      </complexType>
+      <complexType name="TravelerInfoSummaryType">
+        <sequence>
+          <element name="AirTravelerAvail" nillable="true" type="tns1:AirTravelerAvailType"/>
+        </sequence>
+      </complexType>
+      <complexType name="DepartureAirportType">
+        <sequence/>
+        <attribute name="LocationCode" type="xsd:string"/>
+      </complexType>
+      <complexType name="ArrivalAirportType">
+        <sequence/>
+        <attribute name="LocationCode" type="xsd:string"/>
+      </complexType>
+      <complexType name="EquipmentType">
+        <sequence/>
+        <attribute name="AirEquipType" type="xsd:string"/>
+        <attribute name="ChangeofGauge" type="xsd:string"/>
+      </complexType>
+      <complexType name="MarkettingAirlineType">
+        <sequence/>
+        <attribute name="CompanyShortName" type="xsd:string"/>
+      </complexType>
+      <complexType name="MarketingCabinType">
+        <sequence>
+          <element name="Meal" nillable="true" type="xsd:string"/>
+        </sequence>
+        <attribute name="RPH" type="xsd:int"/>
+        <attribute name="CabinType" type="xsd:string"/>
+      </complexType>
+      <complexType name="BookingClassAvailType">
+        <sequence/>
+        <attribute name="RPH" type="xsd:int"/>
+        <attribute name="ResBookDesigCode" type="xsd:string"/>
+        <attribute name="ResBookDesigQuantity" type="xsd:int"/>
+      </complexType>
+      <complexType name="FlightSegmentType">
+        <sequence>
+          <element name="DepartureAirport" nillable="true" type="tns1:DepartureAirportType"/>
+          <element name="ArrivalAirport" nillable="true" type="tns1:ArrivalAirportType"/>
+          <element name="Equipment" nillable="true" type="tns1:EquipmentType"/>
+          <element name="MarkettingAirline" nillable="true" type="tns1:MarkettingAirlineType"/>
+          <element maxOccurs="unbounded" minOccurs="0" name="MarketingCabin" nillable="true" type="tns1:MarketingCabinType"/>
+          <element maxOccurs="unbounded" minOccurs="0" name="BookingClassAvail" nillable="true" type="tns1:BookingClassAvailType"/>
+          <element name="comment" nillable="true" type="xsd:string"/>
+        </sequence>
+        <attribute name="ArrivalDateTime" type="xsd:string"/>
+        <attribute name="DepartureDateTime" type="xsd:string"/>
+        <attribute name="FlightNumber" type="xsd:string"/>
+        <attribute name="JourneyDuration" type="xsd:string"/>
+        <attribute name="OnTimeRate" type="xsd:string"/>
+        <attribute name="ResBookDesigCode" type="xsd:string"/>
+        <attribute name="ResBookDesigID" type="xsd:string"/>
+        <attribute name="StopQuantity" type="xsd:int"/>
+        <attribute name="Ticket" type="xsd:string"/>
+      </complexType>
+      <complexType name="OriginDestinationOptionType">
+        <sequence>
+          <element maxOccurs="unbounded" minOccurs="0" name="FlightSegment" nillable="true" type="tns1:FlightSegmentType"/>
+          <element name="dummy" nillable="true" type="xsd:string"/>
+        </sequence>
+      </complexType>
+      <complexType name="OriginDestinationOptionsType">
+        <sequence>
+          <element maxOccurs="unbounded" minOccurs="0" name="OriginDestinationOption" nillable="true" type="tns1:OriginDestinationOptionType"/>
+          <element name="dummy" nillable="true" type="xsd:string"/>
+        </sequence>
+      </complexType>
+      <complexType name="AirItineraryType">
+        <sequence>
+          <element name="OriginDestinationOptions" nillable="true" type="tns1:OriginDestinationOptionsType"/>
+        </sequence>
+        <attribute name="DirectionInd" type="xsd:string"/>
+      </complexType>
+      <complexType name="UniqueIDType">
+        <sequence/>
+        <attribute name="ID" type="xsd:string"/>
+        <attribute name="URL" type="xsd:string"/>
+        <attribute name="Instance" type="xsd:string"/>
+        <attribute name="Type" type="xsd:string"/>
+      </complexType>
+      <complexType name="ProfileRefType">
+        <sequence>
+          <element name="UniqueID" nillable="true" type="tns1:UniqueIDType"/>
+        </sequence>
+      </complexType>
+      <complexType name="PersonNameType">
+        <sequence>
+          <element name="NamePrefix" nillable="true" type="xsd:string"/>
+          <element name="GivenName" nillable="true" type="xsd:string"/>
+          <element name="Surname" nillable="true" type="xsd:string"/>
+          <element name="NameTitle" nillable="true" type="xsd:string"/>
+        </sequence>
+      </complexType>
+      <complexType name="TelephoneType">
+        <sequence/>
+        <attribute name="AreaCityCode" type="xsd:string"/>
+        <attribute name="PhoneNumber" type="xsd:string"/>
+      </complexType>
+      <complexType name="DocumentType">
+        <sequence>
+          <element name="DocHolderName" nillable="true" type="xsd:string"/>
+        </sequence>
+        <attribute name="BirthDate" type="xsd:string"/>
+        <attribute name="DocID" type="xsd:string"/>
+        <attribute name="DocIssueAuthority" type="xsd:string"/>
+        <attribute name="DocIssueLocation" type="xsd:string"/>
+        <attribute name="DocType" type="xsd:string"/>
+        <attribute name="EffectiveDate" type="xsd:string"/>
+        <attribute name="ExpireDate" type="xsd:string"/>
+        <attribute name="Gender" type="xsd:string"/>
+      </complexType>
+      <complexType name="AirTravelerType">
+        <sequence>
+          <element name="ProfileRef" nillable="true" type="tns1:ProfileRefType"/>
+          <element name="PersonName" nillable="true" type="tns1:PersonNameType"/>
+          <element name="Telephone" nillable="true" type="tns1:TelephoneType"/>
+          <element name="Email" nillable="true" type="xsd:string"/>
+          <element name="Document" nillable="true" type="tns1:DocumentType"/>
+        </sequence>
+        <attribute name="PassengerTypeCode" type="xsd:string"/>
+        <attribute name="TicketNumber" type="xsd:string"/>
+      </complexType>
+      <complexType name="SpecialServiceRequestType">
+        <sequence>
+          <element name="Airline" nillable="true" type="xsd:string"/>
+          <element name="text" nillable="true" type="xsd:string"/>
+        </sequence>
+        <attribute name="SSRCode" type="xsd:string"/>
+        <attribute name="FlightRefNumberRPHList" type="xsd:int"/>
+        <attribute name="TravelerRefNumberRPHList" type="xsd:string"/>
+      </complexType>
+      <complexType name="SpecialServiceRequestsType">
+        <sequence>
+          <element maxOccurs="unbounded" minOccurs="0" name="SpecialServiceRequest" nillable="true" type="tns1:SpecialServiceRequestType"/>
+          <element name="dummy" nillable="true" type="xsd:string"/>
+        </sequence>
+      </complexType>
+      <complexType name="SpecialReqDetailsType">
+        <sequence>
+          <element name="SeatRequests" nillable="true" type="intf:ArrayOfSeatRequestType"/>
+          <element name="SpecialServiceRequests" nillable="true" type="tns1:SpecialServiceRequestsType"/>
+        </sequence>
+      </complexType>
+      <complexType name="TravelerInfoType">
+        <sequence>
+          <element maxOccurs="unbounded" minOccurs="0" name="AirTraveler" nillable="true" type="tns1:AirTravelerType"/>
+          <element maxOccurs="unbounded" minOccurs="0" name="SpecialReqDetails" nillable="true" type="tns1:SpecialReqDetailsType"/>
+        </sequence>
+      </complexType>
+      <complexType name="TicketingType">
+        <sequence/>
+        <attribute name="TicketType" type="xsd:string"/>
+      </complexType>
+      <complexType name="CompanyNameType">
+        <sequence/>
+        <attribute name="Code" type="xsd:string"/>
+      </complexType>
+      <complexType name="BookingReferenceIDType">
+        <sequence>
+          <element name="CompanyName" nillable="true" type="tns1:CompanyNameType"/>
+        </sequence>
+        <attribute name="ID" type="xsd:string"/>
+        <attribute name="Type" type="xsd:string"/>
+        <attribute name="TicketTimeLimit" type="xsd:string"/>
+      </complexType>
+      <complexType name="AirReservationType">
+        <sequence>
+          <element name="AirItinerary" nillable="true" type="tns1:AirItineraryType"/>
+          <element name="TravelerInfo" nillable="true" type="tns1:TravelerInfoType"/>
+          <element name="BookingReferenceID" nillable="true" type="tns1:BookingReferenceIDType"/>
+        </sequence>
+        <attribute name="TotalFare" type="xsd:string"/>
+        <attribute name="TotalTaxes" type="xsd:string"/>
+        <attribute name="TotalAmount" type="xsd:string"/>
+        <attribute name="Currency" type="xsd:string"/>
+      </complexType>
+      <complexType name="UniqueIDShortType">
+        <sequence>
+          <element name="CompanyName" nillable="true" type="tns1:CompanyNameType"/>
+        </sequence>
+        <attribute name="ID" type="xsd:string"/>
+      </complexType>
+      <complexType name="SpecificFlightInfoType">
+        <sequence>
+          <element name="FlightNumber" nillable="true" type="xsd:string"/>
+          <element name="BookingClassPref" nillable="true" type="tns1:BookingClassPrefType"/>
+        </sequence>
+      </complexType>
+      <complexType name="TravelDatesType">
+        <sequence/>
+        <attribute name="ArrivalDate" type="xsd:string"/>
+        <attribute name="DepartureDate" type="xsd:string"/>
+      </complexType>
+      <complexType name="FareType">
+        <sequence/>
+        <attribute name="Amount" type="xsd:string"/>
+        <attribute name="CurrencyCode" type="xsd:string"/>
+        <attribute name="DecimalPlaces" type="xsd:int"/>
+      </complexType>
+      <complexType name="TaxType">
+        <sequence/>
+        <attribute name="Amount" type="xsd:string"/>
+        <attribute name="CurrencyCode" type="xsd:string"/>
+        <attribute name="TaxCode" type="xsd:string"/>
+        <attribute name="DecimalPlaces" type="xsd:int"/>
+      </complexType>
+      <complexType name="TaxesType">
+        <sequence>
+          <element maxOccurs="unbounded" name="Tax" nillable="true" type="tns1:TaxType"/>
+        </sequence>
+      </complexType>
+      <complexType name="PricingInfoType">
+        <sequence>
+          <element name="BaseFare" nillable="true" type="tns1:FareType"/>
+          <element name="Taxes" nillable="true" type="tns1:TaxesType"/>
+          <element name="TotalFare" nillable="true" type="tns1:FareType"/>
+        </sequence>
+        <attribute name="PassengerTypeCode" type="xsd:string"/>
+      </complexType>
+      <complexType name="FareDisplayInfoType">
+        <sequence>
+          <element name="TravelDates" nillable="true" type="tns1:TravelDatesType"/>
+          <element name="FareReference" nillable="true" type="xsd:string"/>
+          <element name="FareReferenceID" nillable="true" type="xsd:string"/>
+          <element name="MarkettingAirline" nillable="true" type="tns1:MarkettingAirlineType"/>
+          <element name="DepartureLocation" nillable="true" type="tns1:LocationType"/>
+          <element name="ArrivalLocation" nillable="true" type="tns1:LocationType"/>
+          <element name="PricingInfo" nillable="true" type="tns1:PricingInfoType"/>
+        </sequence>
+        <attribute name="ResBookDesigCode" type="xsd:string"/>
+      </complexType>
+      <complexType name="FareDisplayInfosType">
+        <sequence>
+          <element maxOccurs="unbounded" minOccurs="0" name="FareDisplayInfo" nillable="true" type="tns1:FareDisplayInfoType"/>
+          <element name="dummy" nillable="true" type="xsd:string"/>
+        </sequence>
+      </complexType>
+      <complexType name="ReadRequestType">
+        <sequence>
+          <element maxOccurs="unbounded" minOccurs="0" name="UniqueID" nillable="true" type="tns1:UniqueIDShortType"/>
+          <element name="dummy" nillable="true" type="xsd:string"/>
+        </sequence>
+      </complexType>
+      <complexType name="ReadRequestsType">
+        <sequence>
+          <element maxOccurs="unbounded" minOccurs="0" name="ReadRequest" nillable="true" type="tns1:ReadRequestType"/>
+          <element name="dummy" type="xsd:string"/>
+        </sequence>
+      </complexType>
+    </schema>
+    <schema attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://ota.paxws.otaxmlws/" xmlns="http://www.w3.org/2001/XMLSchema" xmlns:ns1="http://schemas.xmlsoap.org/soap/encoding/">
+      <import namespace="http://types.paxws.otaxmlws/"/>
+      <complexType name="OTA_AirAvailRQType">
+        <sequence>
+          <element name="POS" type="tns1:POSType"/>
+          <element name="OriginDestinationInformation" nillable="true" type="tns1:OriginDestinationInformationType"/>
+          <element name="TravelPreferences" nillable="true" type="tns1:TravelPreferencesType"/>
+          <element name="TravelerInfoSummary" nillable="true" type="tns1:TravelerInfoSummaryType"/>
+        </sequence>
+        <attribute name="DirectFlightsOnly" type="xsd:boolean"/>
+        <attribute name="PrimaryLangID" type="xsd:string"/>
+        <attribute name="SequenceNmbr" type="xsd:int"/>
+      </complexType>
+      <element name="OTA_AirAvailRSType">
+        <complexType>
+          <sequence>
+            <element name="Success" type="xsd:boolean"/>
+            <element name="OriginDestinationOptions" nillable="true" type="tns1:OriginDestinationOptionsType"/>
+          </sequence>
+          <attribute name="SequenceNmbr" type="xsd:int"/>
+          <attribute name="TimeStamp" type="xsd:string"/>
+        </complexType>
+      </element>
+      <complexType name="PaxWebServiceException">
+        <sequence>
+          <element name="faultcode" nillable="true" type="xsd:string"/>
+          <element name="faultstring" nillable="true" type="xsd:string"/>
+          <element name="description" nillable="true" type="xsd:string"/>
+        </sequence>
+      </complexType>
+      <element name="fault" type="intf:PaxWebServiceException"/>
+      <complexType name="SeatRequestType">
+        <sequence/>
+        <attribute name="FlightRefNumberRPHList" type="xsd:string"/>
+        <attribute name="SeatNumber" type="xsd:string"/>
+        <attribute name="TravelerRefNumberRPHList" type="xsd:string"/>
+      </complexType>
+      <complexType name="ArrayOfSeatRequestType">
+        <sequence>
+          <element maxOccurs="unbounded" minOccurs="0" name="item" type="intf:SeatRequestType"/>
+        </sequence>
+      </complexType>
+      <complexType name="OTA_AirBookRQType">
+        <sequence>
+          <element name="POS" type="tns1:POSType"/>
+          <element name="AirItinerary" nillable="true" type="tns1:AirItineraryType"/>
+          <element name="TravelerInfo" nillable="true" type="tns1:TravelerInfoType"/>
+          <element name="Ticketing" nillable="true" type="tns1:TicketingType"/>
+        </sequence>
+        <attribute name="SequenceNmbr" type="xsd:int"/>
+        <attribute name="TimeStamp" type="xsd:string"/>
+        <attribute name="ExtTransactionID" type="xsd:string"/>
+      </complexType>
+      <element name="OTA_AirBookRSType">
+        <complexType>
+          <sequence>
+            <element name="Success" type="xsd:boolean"/>
+            <element name="AirReservation" nillable="true" type="tns1:AirReservationType"/>
+          </sequence>
+          <attribute name="SequenceNmbr" type="xsd:int"/>
+          <attribute name="TimeStamp" type="xsd:string"/>
+          <attribute name="ExtTransactionID" type="xsd:string"/>
+        </complexType>
+      </element>
+      <complexType name="OTA_PingRQType">
+        <sequence>
+          <element name="EchoData" nillable="true" type="xsd:string"/>
+        </sequence>
+        <attribute name="SequenceNmbr" type="xsd:int"/>
+        <attribute name="TimeStamp" type="xsd:string"/>
+      </complexType>
+      <element name="OTA_PingRSType">
+        <complexType>
+          <sequence>
+            <element name="EchoData" nillable="true" type="xsd:string"/>
+          </sequence>
+          <attribute name="SequenceNmbr" type="xsd:int"/>
+          <attribute name="TimeStamp" type="xsd:string"/>
+        </complexType>
+      </element>
+      <complexType name="OTA_CancelRQType">
+        <sequence>
+          <element name="POS" type="tns1:POSType"/>
+          <element maxOccurs="unbounded" name="UniqueID" nillable="true" type="tns1:UniqueIDShortType"/>
+        </sequence>
+        <attribute name="SequenceNmbr" type="xsd:int"/>
+        <attribute name="TimeStamp" type="xsd:string"/>
+        <attribute name="CancelType" type="xsd:string" use="required"/>
+      </complexType>
+      <element name="OTA_CancelRSType">
+        <complexType>
+          <sequence>
+            <element name="Success" type="xsd:boolean"/>
+            <element maxOccurs="unbounded" name="UniqueID" nillable="true" type="tns1:UniqueIDShortType"/>
+            <element name="RefundAmount" nillable="true" type="xsd:string"/>
+            <element name="CashRefundAmount" nillable="true" type="xsd:string"/>
+          </sequence>
+          <attribute name="SequenceNmbr" type="xsd:int"/>
+          <attribute name="TimeStamp" type="xsd:string"/>
+        </complexType>
+      </element>
+      <complexType name="OTA_AirFareDisplayRQType">
+        <sequence>
+          <element name="POS" type="tns1:POSType"/>
+          <element name="OriginDestinationInformation" nillable="true" type="tns1:OriginDestinationInformationType"/>
+          <element name="SpecificFlightInfo" nillable="true" type="tns1:SpecificFlightInfoType"/>
+        </sequence>
+        <attribute name="PrimaryLangID" type="xsd:string"/>
+        <attribute name="SequenceNmbr" type="xsd:int"/>
+        <attribute name="TimeStamp" type="xsd:string"/>
+      </complexType>
+      <element name="OTA_AirFareDisplayRSType">
+        <complexType>
+          <sequence>
+            <element name="Success" type="xsd:boolean"/>
+            <element name="FareDisplayInfos" nillable="true" type="tns1:FareDisplayInfosType"/>
+          </sequence>
+          <attribute name="SequenceNmbr" type="xsd:int"/>
+          <attribute name="TimeStamp" type="xsd:string"/>
+        </complexType>
+      </element>
+      <complexType name="OTA_ReadRQType">
+        <sequence>
+          <element name="POS" type="tns1:POSType"/>
+          <element name="ReadRequests" nillable="true" type="tns1:ReadRequestsType"/>
+        </sequence>
+        <attribute name="SequenceNmbr" type="xsd:int"/>
+        <attribute name="TimeStamp" type="xsd:string"/>
+      </complexType>
+      <complexType name="OTA_TicketReservationRQType">
+        <sequence>
+          <element name="POS" type="tns1:POSType"/>
+          <element name="BookingReferenceID" nillable="true" type="tns1:UniqueIDShortType"/>
+          <element name="SpecialServiceRequests" nillable="true" type="tns1:SpecialServiceRequestsType"/>
+        </sequence>
+        <attribute name="SequenceNmbr" type="xsd:int"/>
+        <attribute name="TimeStamp" type="xsd:string"/>
+      </complexType>
+      <complexType name="OTA_ServiceChargeRQType">
+        <sequence>
+          <element name="POS" type="tns1:POSType"/>
+          <element name="AirItinerary" nillable="true" type="tns1:AirItineraryType"/>
+          <element name="AdultCount" nillable="true" type="xsd:int"/>
+          <element name="ChildCount" nillable="true" type="xsd:int"/>
+          <element name="InfantCount" nillable="true" type="xsd:int"/>
+        </sequence>
+      </complexType>
+      <element name="OTA_ServiceChargeRSType">
+        <complexType>
+          <sequence>
+            <element name="ServiceCharge" type="tns1:FareType"/>
+          </sequence>
+        </complexType>
+      </element>
+    </schema>
+    <schema attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://otabase.otapax.otaxmlws/" xmlns="http://www.w3.org/2001/XMLSchema">
+      <import namespace="http://ota.paxws.otaxmlws/"/>
+      <import namespace="http://types.paxws.otaxmlws/"/>
+      <element name="OTA_AirAvailRQ" type="intf:OTA_AirAvailRQType"/>
+      <element name="OTA_AirBookRQ" type="intf:OTA_AirBookRQType"/>
+      <element name="OTA_PingRQ" type="intf:OTA_PingRQType"/>
+      <element name="OTA_CancelRQ" type="intf:OTA_CancelRQType"/>
+      <element name="OTA_AirFareDisplayRQ" type="intf:OTA_AirFareDisplayRQType"/>
+      <element name="OTA_ReadRQ" type="intf:OTA_ReadRQType"/>
+      <element name="OTA_TicketReservationRQ" type="intf:OTA_TicketReservationRQType"/>
+      <element name="OTA_ServiceChargeRQ" type="intf:OTA_ServiceChargeRQType"/>
+    </schema>
+  </wsdl:types>
+  <wsdl:message name="CalculateServiceChargeRequest">
+    <wsdl:part name="part1" element="tns2:OTA_ServiceChargeRQ"/>
+  </wsdl:message>
+  <wsdl:message name="CalculateServiceChargeResponse">
+    <wsdl:part name="part1" element="impl:OTA_ServiceChargeRSType"/>
+  </wsdl:message>
+  <wsdl:message name="PaxWebServiceException">
+    <wsdl:part name="part1" element="impl:fault"/>
+  </wsdl:message>
+  <wsdl:message name="TicketReservationRequest">
+    <wsdl:part name="part1" element="tns2:OTA_TicketReservationRQ"/>
+  </wsdl:message>
+  <wsdl:message name="TicketReservationResponse">
+    <wsdl:part name="part1" element="impl:OTA_AirBookRSType"/>
+  </wsdl:message>
+  <wsdl:message name="CancelReservationRequest">
+    <wsdl:part name="part1" element="tns2:OTA_CancelRQ"/>
+  </wsdl:message>
+  <wsdl:message name="CancelReservationResponse">
+    <wsdl:part name="part1" element="impl:OTA_CancelRSType"/>
+  </wsdl:message>
+  <wsdl:message name="AvabilityRequest">
+    <wsdl:part name="part1" element="tns2:OTA_AirAvailRQ"/>
+  </wsdl:message>
+  <wsdl:message name="AvabilityResponse">
+    <wsdl:part name="part1" element="impl:OTA_AirAvailRSType"/>
+  </wsdl:message>
+  <wsdl:message name="FareDisplayRequest">
+    <wsdl:part name="part1" element="tns2:OTA_AirFareDisplayRQ"/>
+  </wsdl:message>
+  <wsdl:message name="FareDisplayResponse">
+    <wsdl:part name="part1" element="impl:OTA_AirFareDisplayRSType"/>
+  </wsdl:message>
+  <wsdl:message name="myBookingMethodRequest">
+    <wsdl:part name="part1" element="tns2:OTA_AirBookRQ"/>
+  </wsdl:message>
+  <wsdl:message name="myBookingMethodResponse">
+    <wsdl:part name="part1" element="impl:OTA_AirBookRSType"/>
+  </wsdl:message>
+  <wsdl:message name="ReadReservationRequest">
+    <wsdl:part name="part1" element="tns2:OTA_ReadRQ"/>
+  </wsdl:message>
+  <wsdl:message name="ReadReservationResponse">
+    <wsdl:part name="part1" element="impl:OTA_AirBookRSType"/>
+  </wsdl:message>
+  <wsdl:message name="PingRequest">
+    <wsdl:part name="part1" element="tns2:OTA_PingRQ"/>
+  </wsdl:message>
+  <wsdl:message name="PingResponse">
+    <wsdl:part name="part1" element="impl:OTA_PingRSType"/>
+  </wsdl:message>
+  <wsdl:portType name="CraneOTAServicePortType">
+    <wsdl:operation name="CalculateServiceCharge">
+      <wsdl:input message="impl:CalculateServiceChargeRequest" wsaw:Action="/CalculateServiceCharge"/>
+      <wsdl:output message="impl:CalculateServiceChargeResponse" wsaw:Action="//ota.paxws.otaxmlws/CraneOTAServicePortType/CalculateServiceChargeResponse"/>
+      <wsdl:fault message="impl:PaxWebServiceException" name="PaxWebServiceException" wsaw:Action="//ota.paxws.otaxmlws/CraneOTAServicePortType/Booking/Fault/PaxWebServiceException"/>
+    </wsdl:operation>
+    <wsdl:operation name="TicketReservation">
+      <wsdl:input message="impl:TicketReservationRequest" wsaw:Action="/TicketReservation"/>
+      <wsdl:output message="impl:TicketReservationResponse" wsaw:Action="//ota.paxws.otaxmlws/CraneOTAServicePortType/TicketReservationResponse"/>
+      <wsdl:fault message="impl:PaxWebServiceException" name="PaxWebServiceException" wsaw:Action="//ota.paxws.otaxmlws/CraneOTAServicePortType/TicketReservation/Fault/PaxWebServiceException"/>
+    </wsdl:operation>
+    <wsdl:operation name="CancelReservation">
+      <wsdl:input message="impl:CancelReservationRequest" wsaw:Action="/CancelReservation"/>
+      <wsdl:output message="impl:CancelReservationResponse" wsaw:Action="//ota.paxws.otaxmlws/CraneOTAServicePortType/CancelReservationResponse"/>
+      <wsdl:fault message="impl:PaxWebServiceException" name="PaxWebServiceException" wsaw:Action="//ota.paxws.otaxmlws/CraneOTAServicePortType/CancelReservation/Fault/PaxWebServiceException"/>
+    </wsdl:operation>
+    <wsdl:operation name="Availability">
+      <wsdl:input message="impl:AvabilityRequest" wsaw:Action="/Availability"/>
+      <wsdl:output message="impl:AvabilityResponse" wsaw:Action="//ota.paxws.otaxmlws/CraneOTAServicePortType/AvailabilityResponse"/>
+      <wsdl:fault message="impl:PaxWebServiceException" name="PaxWebServiceException" wsaw:Action="//ota.paxws.otaxmlws/CraneOTAServicePortType/Availability/Fault/PaxWebServiceException"/>
+    </wsdl:operation>
+    <wsdl:operation name="FareDisplay">
+      <wsdl:input message="impl:FareDisplayRequest" wsaw:Action="/FareDisplay"/>
+      <wsdl:output message="impl:FareDisplayResponse" wsaw:Action="//ota.paxws.otaxmlws/CraneOTAServicePortType/FareDisplayResponse"/>
+      <wsdl:fault message="impl:PaxWebServiceException" name="PaxWebServiceException" wsaw:Action="//ota.paxws.otaxmlws/CraneOTAServicePortType/FareDisplay/Fault/PaxWebServiceException"/>
+    </wsdl:operation>
+    <wsdl:operation name="Booking">
+      <wsdl:input message="impl:myBookingMethodRequest" wsaw:Action="/Booking"/>
+      <wsdl:output message="impl:myBookingMethodResponse" wsaw:Action="//ota.paxws.otaxmlws/CraneOTAServicePortType/BookingResponse"/>
+      <wsdl:fault message="impl:PaxWebServiceException" name="PaxWebServiceException" wsaw:Action="//ota.paxws.otaxmlws/CraneOTAServicePortType/Booking/Fault/PaxWebServiceException"/>
+    </wsdl:operation>
+    <wsdl:operation name="ReadReservation">
+      <wsdl:input message="impl:ReadReservationRequest" wsaw:Action="/ReadReservation"/>
+      <wsdl:output message="impl:ReadReservationResponse" wsaw:Action="//ota.paxws.otaxmlws/CraneOTAServicePortType/ReadReservationResponse"/>
+      <wsdl:fault message="impl:PaxWebServiceException" name="PaxWebServiceException" wsaw:Action="//ota.paxws.otaxmlws/CraneOTAServicePortType/ReadReservation/Fault/PaxWebServiceException"/>
+    </wsdl:operation>
+    <wsdl:operation name="Ping">
+      <wsdl:input message="impl:PingRequest" wsaw:Action="/Ping"/>
+      <wsdl:output message="impl:PingResponse" wsaw:Action="//ota.paxws.otaxmlws/CraneOTAServicePortType/PingResponse"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="CraneOTAServiceSOAP11Binding" type="impl:CraneOTAServicePortType">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document"/>
+    <wsdl:operation name="CalculateServiceCharge">
+      <soap:operation soapAction="/CalculateServiceCharge" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="PaxWebServiceException">
+        <soap:body use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="TicketReservation">
+      <soap:operation soapAction="/TicketReservation" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="PaxWebServiceException">
+        <soap:body use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="CancelReservation">
+      <soap:operation soapAction="/CancelReservation" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="PaxWebServiceException">
+        <soap:body use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="Availability">
+      <soap:operation soapAction="/Availability" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="PaxWebServiceException">
+        <soap:body use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="FareDisplay">
+      <soap:operation soapAction="/FareDisplay" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="PaxWebServiceException">
+        <soap:body use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="Booking">
+      <soap:operation soapAction="/Booking" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="PaxWebServiceException">
+        <soap:body use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ReadReservation">
+      <soap:operation soapAction="/ReadReservation" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="PaxWebServiceException">
+        <soap:body use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="Ping">
+      <soap:operation soapAction="/Ping" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="CraneOTAServiceSOAP12Binding" type="impl:CraneOTAServicePortType">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" style="document"/>
+    <wsdl:operation name="CalculateServiceCharge">
+      <soap12:operation soapAction="/CalculateServiceCharge" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="PaxWebServiceException">
+        <soap12:fault use="literal" name="PaxWebServiceException"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="TicketReservation">
+      <soap12:operation soapAction="/TicketReservation" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="PaxWebServiceException">
+        <soap12:fault use="literal" name="PaxWebServiceException"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="CancelReservation">
+      <soap12:operation soapAction="/CancelReservation" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="PaxWebServiceException">
+        <soap12:fault use="literal" name="PaxWebServiceException"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="Availability">
+      <soap12:operation soapAction="/Availability" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="PaxWebServiceException">
+        <soap12:fault use="literal" name="PaxWebServiceException"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="FareDisplay">
+      <soap12:operation soapAction="/FareDisplay" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="PaxWebServiceException">
+        <soap12:fault use="literal" name="PaxWebServiceException"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="Booking">
+      <soap12:operation soapAction="/Booking" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="PaxWebServiceException">
+        <soap12:fault use="literal" name="PaxWebServiceException"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ReadReservation">
+      <soap12:operation soapAction="/ReadReservation" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="PaxWebServiceException">
+        <soap12:fault use="literal" name="PaxWebServiceException"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="Ping">
+      <soap12:operation soapAction="/Ping" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="CraneOTAServiceHttpBinding" type="impl:CraneOTAServicePortType">
+    <http:binding verb="POST"/>
+    <wsdl:operation name="CalculateServiceCharge">
+      <http:operation location="CalculateServiceCharge"/>
+      <wsdl:input>
+        <mime:content type="text/xml"/>
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content type="text/xml"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TicketReservation">
+      <http:operation location="TicketReservation"/>
+      <wsdl:input>
+        <mime:content type="text/xml"/>
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content type="text/xml"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CancelReservation">
+      <http:operation location="CancelReservation"/>
+      <wsdl:input>
+        <mime:content type="text/xml"/>
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content type="text/xml"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Availability">
+      <http:operation location="Availability"/>
+      <wsdl:input>
+        <mime:content type="text/xml"/>
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content type="text/xml"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FareDisplay">
+      <http:operation location="FareDisplay"/>
+      <wsdl:input>
+        <mime:content type="text/xml"/>
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content type="text/xml"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Booking">
+      <http:operation location="Booking"/>
+      <wsdl:input>
+        <mime:content type="text/xml"/>
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content type="text/xml"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReadReservation">
+      <http:operation location="ReadReservation"/>
+      <wsdl:input>
+        <mime:content type="text/xml"/>
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content type="text/xml"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Ping">
+      <http:operation location="Ping"/>
+      <wsdl:input>
+        <mime:content type="text/xml"/>
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content type="text/xml"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="CraneOTAService">
+    <wsdl:port name="CraneOTAServiceSOAP11port_http" binding="impl:CraneOTAServiceSOAP11Binding">
+      <soap:address location="http://brj-stage.crane.aero:80/axis2/services/CraneOTAService"/>
+    </wsdl:port>
+    <wsdl:port name="CraneOTAServiceSOAP12port_http" binding="impl:CraneOTAServiceSOAP12Binding">
+      <soap12:address location="http://brj-stage.crane.aero:80/axis2/services/CraneOTAService"/>
+    </wsdl:port>
+    <wsdl:port name="CraneOTAServiceHttpport1" binding="impl:CraneOTAServiceHttpBinding">
+      <http:address location="http://brj-stage.crane.aero:80/axis2/rest/CraneOTAService"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://brj-stage.crane.aero:80/axis2/services/CraneOTAService</con:endpoint></con:endpoints><con:operation isOneWay="false" action="/Availability" name="Availability" bindingOperationName="Availability" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://brj-stage.crane.aero:80/axis2/services/CraneOTAService</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:otab="http://otabase.otapax.otaxmlws/" xmlns:ota="http://ota.paxws.otaxmlws/" xmlns:typ="http://types.paxws.otaxmlws/">
+   <soap:Header/>
+   <soap:Body>
+      <otab:OTA_AirAvailRQ DirectFlightsOnly="?" PrimaryLangID="?" SequenceNmbr="?">
+         <ota:POS>
+            <typ:Source agentSine="?" isoCountry="?" isoCurrency="?">
+               <typ:RequestorID id="?" type="?" url="?"/>
+               <typ:BookingChannel Primary="?" Type="?"/>
+            </typ:Source>
+         </ota:POS>
+         <ota:OriginDestinationInformation>
+            <typ:DepartureDateTime>?</typ:DepartureDateTime>
+            <typ:OriginLocation LocationCode="?"/>
+            <typ:DestinationLocation LocationCode="?"/>
+         </ota:OriginDestinationInformation>
+         <ota:TravelPreferences MaxStopsQuantity="?">
+            <typ:FlightTypePref FlightType="?" PreferLevel="?"/>
+            <typ:EquipPref AirEquipType="?"/>
+            <typ:CabinPref Cabin="?" PreferLevel="?"/>
+            <typ:TicketDistribPref DistribType="?" PreferLevel="?"/>
+            <typ:BookingClassPref ResBookDesigCode="?"/>
+         </ota:TravelPreferences>
+         <ota:TravelerInfoSummary>
+            <typ:AirTravelerAvail>
+               <!--Zero or more repetitions:-->
+               <typ:PassengerTypeQuantity Code="?" Quantity="?"/>
+               <typ:temp>?</typ:temp>
+            </typ:AirTravelerAvail>
+         </ota:TravelerInfoSummary>
+      </otab:OTA_AirAvailRQ>
+   </soap:Body>
+</soap:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="/Availability"/></con:call></con:operation><con:operation isOneWay="false" action="/Booking" name="Booking" bindingOperationName="Booking" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://brj-stage.crane.aero:80/axis2/services/CraneOTAService</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:otab="http://otabase.otapax.otaxmlws/" xmlns:ota="http://ota.paxws.otaxmlws/" xmlns:typ="http://types.paxws.otaxmlws/">
+   <soap:Header/>
+   <soap:Body>
+      <otab:OTA_AirBookRQ SequenceNmbr="?" TimeStamp="?" ExtTransactionID="?">
+         <ota:POS>
+            <typ:Source agentSine="?" isoCountry="?" isoCurrency="?">
+               <typ:RequestorID id="?" type="?" url="?"/>
+               <typ:BookingChannel Primary="?" Type="?"/>
+            </typ:Source>
+         </ota:POS>
+         <ota:AirItinerary DirectionInd="?">
+            <typ:OriginDestinationOptions>
+               <!--Zero or more repetitions:-->
+               <typ:OriginDestinationOption>
+                  <!--Zero or more repetitions:-->
+                  <typ:FlightSegment ArrivalDateTime="?" DepartureDateTime="?" FlightNumber="?" JourneyDuration="?" OnTimeRate="?" ResBookDesigCode="?" ResBookDesigID="?" StopQuantity="?" Ticket="?">
+                     <typ:DepartureAirport LocationCode="?"/>
+                     <typ:ArrivalAirport LocationCode="?"/>
+                     <typ:Equipment AirEquipType="?" ChangeofGauge="?"/>
+                     <typ:MarkettingAirline CompanyShortName="?"/>
+                     <!--Zero or more repetitions:-->
+                     <typ:MarketingCabin RPH="?" CabinType="?">
+                        <typ:Meal>?</typ:Meal>
+                     </typ:MarketingCabin>
+                     <!--Zero or more repetitions:-->
+                     <typ:BookingClassAvail RPH="?" ResBookDesigCode="?" ResBookDesigQuantity="?"/>
+                     <typ:comment>?</typ:comment>
+                  </typ:FlightSegment>
+                  <typ:dummy>?</typ:dummy>
+               </typ:OriginDestinationOption>
+               <typ:dummy>?</typ:dummy>
+            </typ:OriginDestinationOptions>
+         </ota:AirItinerary>
+         <ota:TravelerInfo>
+            <!--Zero or more repetitions:-->
+            <typ:AirTraveler PassengerTypeCode="?" TicketNumber="?">
+               <typ:ProfileRef>
+                  <typ:UniqueID ID="?" URL="?" Instance="?" Type="?"/>
+               </typ:ProfileRef>
+               <typ:PersonName>
+                  <typ:NamePrefix>?</typ:NamePrefix>
+                  <typ:GivenName>?</typ:GivenName>
+                  <typ:Surname>?</typ:Surname>
+                  <typ:NameTitle>?</typ:NameTitle>
+               </typ:PersonName>
+               <typ:Telephone AreaCityCode="?" PhoneNumber="?"/>
+               <typ:Email>?</typ:Email>
+               <typ:Document BirthDate="?" DocID="?" DocIssueAuthority="?" DocIssueLocation="?" DocType="?" EffectiveDate="?" ExpireDate="?" Gender="?">
+                  <typ:DocHolderName>?</typ:DocHolderName>
+               </typ:Document>
+            </typ:AirTraveler>
+            <!--Zero or more repetitions:-->
+            <typ:SpecialReqDetails>
+               <typ:SeatRequests>
+                  <!--Zero or more repetitions:-->
+                  <ota:item FlightRefNumberRPHList="?" SeatNumber="?" TravelerRefNumberRPHList="?"/>
+               </typ:SeatRequests>
+               <typ:SpecialServiceRequests>
+                  <!--Zero or more repetitions:-->
+                  <typ:SpecialServiceRequest SSRCode="?" FlightRefNumberRPHList="?" TravelerRefNumberRPHList="?">
+                     <typ:Airline>?</typ:Airline>
+                     <typ:text>?</typ:text>
+                  </typ:SpecialServiceRequest>
+                  <typ:dummy>?</typ:dummy>
+               </typ:SpecialServiceRequests>
+            </typ:SpecialReqDetails>
+         </ota:TravelerInfo>
+         <ota:Ticketing TicketType="?"/>
+      </otab:OTA_AirBookRQ>
+   </soap:Body>
+</soap:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="/Booking"/></con:call></con:operation><con:operation isOneWay="false" action="/CalculateServiceCharge" name="CalculateServiceCharge" bindingOperationName="CalculateServiceCharge" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://brj-stage.crane.aero:80/axis2/services/CraneOTAService</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:otab="http://otabase.otapax.otaxmlws/" xmlns:ota="http://ota.paxws.otaxmlws/" xmlns:typ="http://types.paxws.otaxmlws/">
+   <soap:Header/>
+   <soap:Body>
+      <otab:OTA_ServiceChargeRQ>
+         <ota:POS>
+            <typ:Source agentSine="?" isoCountry="?" isoCurrency="?">
+               <typ:RequestorID id="?" type="?" url="?"/>
+               <typ:BookingChannel Primary="?" Type="?"/>
+            </typ:Source>
+         </ota:POS>
+         <ota:AirItinerary DirectionInd="?">
+            <typ:OriginDestinationOptions>
+               <!--Zero or more repetitions:-->
+               <typ:OriginDestinationOption>
+                  <!--Zero or more repetitions:-->
+                  <typ:FlightSegment ArrivalDateTime="?" DepartureDateTime="?" FlightNumber="?" JourneyDuration="?" OnTimeRate="?" ResBookDesigCode="?" ResBookDesigID="?" StopQuantity="?" Ticket="?">
+                     <typ:DepartureAirport LocationCode="?"/>
+                     <typ:ArrivalAirport LocationCode="?"/>
+                     <typ:Equipment AirEquipType="?" ChangeofGauge="?"/>
+                     <typ:MarkettingAirline CompanyShortName="?"/>
+                     <!--Zero or more repetitions:-->
+                     <typ:MarketingCabin RPH="?" CabinType="?">
+                        <typ:Meal>?</typ:Meal>
+                     </typ:MarketingCabin>
+                     <!--Zero or more repetitions:-->
+                     <typ:BookingClassAvail RPH="?" ResBookDesigCode="?" ResBookDesigQuantity="?"/>
+                     <typ:comment>?</typ:comment>
+                  </typ:FlightSegment>
+                  <typ:dummy>?</typ:dummy>
+               </typ:OriginDestinationOption>
+               <typ:dummy>?</typ:dummy>
+            </typ:OriginDestinationOptions>
+         </ota:AirItinerary>
+         <ota:AdultCount>?</ota:AdultCount>
+         <ota:ChildCount>?</ota:ChildCount>
+         <ota:InfantCount>?</ota:InfantCount>
+      </otab:OTA_ServiceChargeRQ>
+   </soap:Body>
+</soap:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="/CalculateServiceCharge"/></con:call></con:operation><con:operation isOneWay="false" action="/CancelReservation" name="CancelReservation" bindingOperationName="CancelReservation" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://brj-stage.crane.aero:80/axis2/services/CraneOTAService</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:otab="http://otabase.otapax.otaxmlws/" xmlns:ota="http://ota.paxws.otaxmlws/" xmlns:typ="http://types.paxws.otaxmlws/">
+   <soap:Header/>
+   <soap:Body>
+      <otab:OTA_CancelRQ SequenceNmbr="?" TimeStamp="?" CancelType="?">
+         <ota:POS>
+            <typ:Source agentSine="?" isoCountry="?" isoCurrency="?">
+               <typ:RequestorID id="?" type="?" url="?"/>
+               <typ:BookingChannel Primary="?" Type="?"/>
+            </typ:Source>
+         </ota:POS>
+         <!--1 or more repetitions:-->
+         <ota:UniqueID ID="?">
+            <typ:CompanyName Code="?"/>
+         </ota:UniqueID>
+      </otab:OTA_CancelRQ>
+   </soap:Body>
+</soap:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="/CancelReservation"/></con:call></con:operation><con:operation isOneWay="false" action="/FareDisplay" name="FareDisplay" bindingOperationName="FareDisplay" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://brj-stage.crane.aero:80/axis2/services/CraneOTAService</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:otab="http://otabase.otapax.otaxmlws/" xmlns:ota="http://ota.paxws.otaxmlws/" xmlns:typ="http://types.paxws.otaxmlws/">
+   <soap:Header/>
+   <soap:Body>
+      <otab:OTA_AirFareDisplayRQ PrimaryLangID="?" SequenceNmbr="?" TimeStamp="?">
+         <ota:POS>
+            <typ:Source agentSine="?" isoCountry="?" isoCurrency="?">
+               <typ:RequestorID id="?" type="?" url="?"/>
+               <typ:BookingChannel Primary="?" Type="?"/>
+            </typ:Source>
+         </ota:POS>
+         <ota:OriginDestinationInformation>
+            <typ:DepartureDateTime>?</typ:DepartureDateTime>
+            <typ:OriginLocation LocationCode="?"/>
+            <typ:DestinationLocation LocationCode="?"/>
+         </ota:OriginDestinationInformation>
+         <ota:SpecificFlightInfo>
+            <typ:FlightNumber>?</typ:FlightNumber>
+            <typ:BookingClassPref ResBookDesigCode="?"/>
+         </ota:SpecificFlightInfo>
+      </otab:OTA_AirFareDisplayRQ>
+   </soap:Body>
+</soap:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="/FareDisplay"/></con:call></con:operation><con:operation isOneWay="false" action="/Ping" name="Ping" bindingOperationName="Ping" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://brj-stage.crane.aero:80/axis2/services/CraneOTAService</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:otab="http://otabase.otapax.otaxmlws/" xmlns:ota="http://ota.paxws.otaxmlws/">
+   <soap:Header/>
+   <soap:Body>
+      <otab:OTA_PingRQ SequenceNmbr="?" TimeStamp="?">
+         <ota:EchoData>?</ota:EchoData>
+      </otab:OTA_PingRQ>
+   </soap:Body>
+</soap:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="/Ping"/></con:call></con:operation><con:operation isOneWay="false" action="/ReadReservation" name="ReadReservation" bindingOperationName="ReadReservation" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://brj-stage.crane.aero:80/axis2/services/CraneOTAService</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:otab="http://otabase.otapax.otaxmlws/" xmlns:ota="http://ota.paxws.otaxmlws/" xmlns:typ="http://types.paxws.otaxmlws/">
+   <soap:Header/>
+   <soap:Body>
+      <otab:OTA_ReadRQ SequenceNmbr="?" TimeStamp="?">
+         <ota:POS>
+            <typ:Source agentSine="?" isoCountry="?" isoCurrency="?">
+               <typ:RequestorID id="?" type="?" url="?"/>
+               <typ:BookingChannel Primary="?" Type="?"/>
+            </typ:Source>
+         </ota:POS>
+         <ota:ReadRequests>
+            <!--Zero or more repetitions:-->
+            <typ:ReadRequest>
+               <!--Zero or more repetitions:-->
+               <typ:UniqueID ID="?">
+                  <typ:CompanyName Code="?"/>
+               </typ:UniqueID>
+               <typ:dummy>?</typ:dummy>
+            </typ:ReadRequest>
+            <typ:dummy>?</typ:dummy>
+         </ota:ReadRequests>
+      </otab:OTA_ReadRQ>
+   </soap:Body>
+</soap:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="/ReadReservation"/></con:call></con:operation><con:operation isOneWay="false" action="/TicketReservation" name="TicketReservation" bindingOperationName="TicketReservation" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://brj-stage.crane.aero:80/axis2/services/CraneOTAService</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:otab="http://otabase.otapax.otaxmlws/" xmlns:ota="http://ota.paxws.otaxmlws/" xmlns:typ="http://types.paxws.otaxmlws/">
+   <soap:Header/>
+   <soap:Body>
+      <otab:OTA_TicketReservationRQ SequenceNmbr="?" TimeStamp="?">
+         <ota:POS>
+            <typ:Source agentSine="?" isoCountry="?" isoCurrency="?">
+               <typ:RequestorID id="?" type="?" url="?"/>
+               <typ:BookingChannel Primary="?" Type="?"/>
+            </typ:Source>
+         </ota:POS>
+         <ota:BookingReferenceID ID="?">
+            <typ:CompanyName Code="?"/>
+         </ota:BookingReferenceID>
+         <ota:SpecialServiceRequests>
+            <!--Zero or more repetitions:-->
+            <typ:SpecialServiceRequest SSRCode="?" FlightRefNumberRPHList="?" TravelerRefNumberRPHList="?">
+               <typ:Airline>?</typ:Airline>
+               <typ:text>?</typ:text>
+            </typ:SpecialServiceRequest>
+            <typ:dummy>?</typ:dummy>
+         </ota:SpecialServiceRequests>
+      </otab:OTA_TicketReservationRQ>
+   </soap:Body>
+</soap:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="/TicketReservation"/></con:call></con:operation></con:interface><con:properties/><con:wssContainer/></con:soapui-project>

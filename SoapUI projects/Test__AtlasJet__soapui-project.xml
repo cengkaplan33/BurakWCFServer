@@ -1,0 +1,1328 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project name="Test__AtlasJet" soapui-version="4.0.1" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" wsaVersion="NONE" name="AtlasjetSoapBinding" type="wsdl" bindingName="{http://webSrv.atlasjetWS}AtlasjetSoapBinding" soapVersion="1_1" anonymous="optional" definition="https://ws.atlasglb.com/ADSAGENCYWS/services/Atlasjet.wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="https://ws.atlasglb.com/ADSAGENCYWS/services/Atlasjet.wsdl"><con:part><con:url>https://ws.atlasglb.com/ADSAGENCYWS/services/Atlasjet.wsdl</con:url><con:content><![CDATA[<wsdl:definitions targetNamespace="http://webSrv.atlasjetWS" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:impl="http://webSrv.atlasjetWS" xmlns:intf="http://webSrv.atlasjetWS" xmlns:tns2="http://data.atlasjetWS" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsi="http://ws-i.org/profiles/basic/1.1/xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <wsdl:types>
+    <schema attributeFormDefault="unqualified" elementFormDefault="unqualified" targetNamespace="http://webSrv.atlasjetWS" xmlns="http://www.w3.org/2001/XMLSchema">
+      <import namespace="http://data.atlasjetWS"/>
+      <element name="availabilityResponse">
+        <complexType>
+          <sequence>
+            <element name="availabilityReturn" nillable="true" type="tns2:AvailabilityData"/>
+          </sequence>
+        </complexType>
+      </element>
+      <element name="availabilityV3">
+        <complexType>
+          <sequence>
+            <element name="username" nillable="true" type="xsd:string"/>
+            <element name="password" nillable="true" type="xsd:string"/>
+            <element name="lang" nillable="true" type="xsd:string"/>
+            <element name="direction" nillable="true" type="xsd:string"/>
+            <element name="origin" nillable="true" type="xsd:string"/>
+            <element name="destination" nillable="true" type="xsd:string"/>
+            <element name="date" nillable="true" type="xsd:string"/>
+            <element name="adult" type="xsd:int"/>
+            <element name="child" type="xsd:int"/>
+            <element name="inf" type="xsd:int"/>
+            <element name="ogr" type="xsd:int"/>
+            <element name="tsk" type="xsd:int"/>
+            <element name="yp" type="xsd:int"/>
+            <element name="sc" type="xsd:int"/>
+            <element name="triptype" nillable="true" type="xsd:string"/>
+          </sequence>
+        </complexType>
+      </element>
+      <element name="availabilityV3Response">
+        <complexType>
+          <sequence>
+            <element name="availabilityV3Return" nillable="true" type="tns2:AvailabilityData"/>
+          </sequence>
+        </complexType>
+      </element>
+      <element name="availabilityV4">
+        <complexType>
+          <sequence>
+            <element name="username" nillable="true" type="xsd:string"/>
+            <element name="password" nillable="true" type="xsd:string"/>
+            <element name="lang" nillable="true" type="xsd:string"/>
+            <element name="direction" nillable="true" type="xsd:string"/>
+            <element name="origin" nillable="true" type="xsd:string"/>
+            <element name="destination" nillable="true" type="xsd:string"/>
+            <element name="depdate" nillable="true" type="xsd:string"/>
+            <element name="retdate" nillable="true" type="xsd:string"/>
+            <element name="adult" type="xsd:int"/>
+            <element name="child" type="xsd:int"/>
+            <element name="inf" type="xsd:int"/>
+            <element name="ogr" type="xsd:int"/>
+            <element name="tsk" type="xsd:int"/>
+            <element name="yp" type="xsd:int"/>
+            <element name="sc" type="xsd:int"/>
+            <element name="triptype" nillable="true" type="xsd:string"/>
+          </sequence>
+        </complexType>
+      </element>
+      <element name="availabilityV4Response">
+        <complexType>
+          <sequence>
+            <element name="availabilityV4Return" nillable="true" type="tns2:AvailabilityData"/>
+          </sequence>
+        </complexType>
+      </element>
+      <element name="timetable">
+        <complexType>
+          <sequence>
+            <element name="username" nillable="true" type="xsd:string"/>
+            <element name="password" nillable="true" type="xsd:string"/>
+            <element name="lang" nillable="true" type="xsd:string"/>
+            <element name="origin" nillable="true" type="xsd:string"/>
+            <element name="destination" nillable="true" type="xsd:string"/>
+            <element name="flightdate" nillable="true" type="xsd:string"/>
+          </sequence>
+        </complexType>
+      </element>
+      <element name="timetableResponse">
+        <complexType>
+          <sequence>
+            <element name="timetableReturn" nillable="true" type="impl:ArrayOf_747913597_496923140_nillable_TimeTableData"/>
+          </sequence>
+        </complexType>
+      </element>
+      <element name="fares">
+        <complexType>
+          <sequence>
+            <element name="username" nillable="true" type="xsd:string"/>
+            <element name="password" nillable="true" type="xsd:string"/>
+            <element name="lang" nillable="true" type="xsd:string"/>
+            <element name="direction" nillable="true" type="xsd:string"/>
+            <element name="depvoyagecode" nillable="true" type="xsd:string"/>
+            <element name="depclass" nillable="true" type="xsd:string"/>
+            <element name="retvoyagecode" nillable="true" type="xsd:string"/>
+            <element name="retclass" nillable="true" type="xsd:string"/>
+            <element name="adult" type="xsd:int"/>
+            <element name="child" type="xsd:int"/>
+            <element name="inf" type="xsd:int"/>
+            <element name="ogr" type="xsd:int"/>
+            <element name="tsk" type="xsd:int"/>
+            <element name="yp" type="xsd:int"/>
+            <element name="sc" type="xsd:int"/>
+          </sequence>
+        </complexType>
+      </element>
+      <element name="faresResponse">
+        <complexType>
+          <sequence>
+            <element name="faresReturn" nillable="true" type="tns2:FareQuoteData"/>
+          </sequence>
+        </complexType>
+      </element>
+      <element name="cancelPnrPrice">
+        <complexType>
+          <sequence>
+            <element name="username" nillable="true" type="xsd:string"/>
+            <element name="password" nillable="true" type="xsd:string"/>
+            <element name="lang" nillable="true" type="xsd:string"/>
+            <element name="pnrno" nillable="true" type="xsd:string"/>
+            <element name="lastname" nillable="true" type="xsd:string"/>
+          </sequence>
+        </complexType>
+      </element>
+      <element name="cancelPnrPriceResponse">
+        <complexType>
+          <sequence>
+            <element name="cancelPnrPriceReturn" nillable="true" type="tns2:CancelPnrPriceData"/>
+          </sequence>
+        </complexType>
+      </element>
+      <element name="psgrForTicketNumber">
+        <complexType>
+          <sequence>
+            <element name="username" nillable="true" type="xsd:string"/>
+            <element name="password" nillable="true" type="xsd:string"/>
+            <element name="lang" nillable="true" type="xsd:string"/>
+            <element name="locator" nillable="true" type="xsd:string"/>
+          </sequence>
+        </complexType>
+      </element>
+      <element name="psgrForTicketNumberResponse">
+        <complexType>
+          <sequence>
+            <element name="psgrForTicketNumberReturn" nillable="true" type="impl:ArrayOf_747913597_496923140_nillable_PsgrForTicketnumberData"/>
+          </sequence>
+        </complexType>
+      </element>
+      <element name="addPassenger">
+        <complexType>
+          <sequence>
+            <element name="username" nillable="true" type="xsd:string"/>
+            <element name="password" nillable="true" type="xsd:string"/>
+            <element name="lang" nillable="true" type="xsd:string"/>
+            <element name="direction" nillable="true" type="xsd:string"/>
+            <element name="depvoyagecode" nillable="true" type="xsd:string"/>
+            <element name="depclass" nillable="true" type="xsd:string"/>
+            <element name="retvoyagecode" nillable="true" type="xsd:string"/>
+            <element name="retclass" nillable="true" type="xsd:string"/>
+            <element name="passengers" nillable="true" type="impl:ArrayOf_747913597_496923140_nillable_PassengersData"/>
+          </sequence>
+        </complexType>
+      </element>
+      <element name="addPassengerResponse">
+        <complexType>
+          <sequence>
+            <element name="addPassengerReturn" nillable="true" type="tns2:ReferenceData"/>
+          </sequence>
+        </complexType>
+      </element>
+      <element name="cancelPnr">
+        <complexType>
+          <sequence>
+            <element name="username" nillable="true" type="xsd:string"/>
+            <element name="password" nillable="true" type="xsd:string"/>
+            <element name="lang" nillable="true" type="xsd:string"/>
+            <element name="pnrno" nillable="true" type="xsd:string"/>
+            <element name="lastname" nillable="true" type="xsd:string"/>
+          </sequence>
+        </complexType>
+      </element>
+      <element name="cancelPnrResponse">
+        <complexType>
+          <sequence>
+            <element name="cancelPnrReturn" nillable="true" type="tns2:CancelPnrData"/>
+          </sequence>
+        </complexType>
+      </element>
+      <element name="openJawAirportsList">
+        <complexType>
+          <sequence>
+            <element name="originCode" nillable="true" type="xsd:string"/>
+            <element name="destinationCode" nillable="true" type="xsd:string"/>
+            <element name="username" nillable="true" type="xsd:string"/>
+            <element name="password" nillable="true" type="xsd:string"/>
+            <element name="lang" nillable="true" type="xsd:string"/>
+          </sequence>
+        </complexType>
+      </element>
+      <element name="openJawAirportsListResponse">
+        <complexType>
+          <sequence>
+            <element name="openJawAirportsListReturn" nillable="true" type="impl:ArrayOf_747913597_496923140_nillable_OpenJawAirportsData"/>
+          </sequence>
+        </complexType>
+      </element>
+      <element name="jetmilInfo">
+        <complexType>
+          <sequence>
+            <element name="username" nillable="true" type="xsd:string"/>
+            <element name="password" nillable="true" type="xsd:string"/>
+            <element name="lang" nillable="true" type="xsd:string"/>
+            <element name="jetmilnumber" nillable="true" type="xsd:string"/>
+          </sequence>
+        </complexType>
+      </element>
+      <element name="jetmilInfoResponse">
+        <complexType>
+          <sequence>
+            <element name="jetmilInfoReturn" nillable="true" type="tns2:JetmilInfoData"/>
+          </sequence>
+        </complexType>
+      </element>
+      <element name="airportsList">
+        <complexType>
+          <sequence>
+            <element name="username" nillable="true" type="xsd:string"/>
+            <element name="password" nillable="true" type="xsd:string"/>
+            <element name="lang" nillable="true" type="xsd:string"/>
+          </sequence>
+        </complexType>
+      </element>
+      <element name="airportsListResponse">
+        <complexType>
+          <sequence>
+            <element name="airportsListReturn" nillable="true" type="impl:ArrayOf_747913597_496923140_nillable_AirportsData"/>
+          </sequence>
+        </complexType>
+      </element>
+      <element name="toAirportsList">
+        <complexType>
+          <sequence>
+            <element name="originCode" nillable="true" type="xsd:string"/>
+            <element name="username" nillable="true" type="xsd:string"/>
+            <element name="password" nillable="true" type="xsd:string"/>
+            <element name="lang" nillable="true" type="xsd:string"/>
+          </sequence>
+        </complexType>
+      </element>
+      <element name="toAirportsListResponse">
+        <complexType>
+          <sequence>
+            <element name="toAirportsListReturn" nillable="true" type="impl:ArrayOf_747913597_496923140_nillable_ToAirportsData"/>
+          </sequence>
+        </complexType>
+      </element>
+      <element name="limitInfo">
+        <complexType>
+          <sequence>
+            <element name="username" nillable="true" type="xsd:string"/>
+            <element name="password" nillable="true" type="xsd:string"/>
+            <element name="lang" nillable="true" type="xsd:string"/>
+          </sequence>
+        </complexType>
+      </element>
+      <element name="limitInfoResponse">
+        <complexType>
+          <sequence>
+            <element name="limitInfoReturn" nillable="true" type="impl:ArrayOf_747913597_496923140_nillable_LimitInfoData"/>
+          </sequence>
+        </complexType>
+      </element>
+      <element name="addPassengerV2">
+        <complexType>
+          <sequence>
+            <element name="username" nillable="true" type="xsd:string"/>
+            <element name="password" nillable="true" type="xsd:string"/>
+            <element name="lang" nillable="true" type="xsd:string"/>
+            <element name="direction" nillable="true" type="xsd:string"/>
+            <element name="depvoyagecode" nillable="true" type="xsd:string"/>
+            <element name="depclass" nillable="true" type="xsd:string"/>
+            <element name="retvoyagecode" nillable="true" type="xsd:string"/>
+            <element name="retclass" nillable="true" type="xsd:string"/>
+            <element name="passengers" nillable="true" type="impl:ArrayOf_747913597_496923140_nillable_PassengersData"/>
+          </sequence>
+        </complexType>
+      </element>
+      <element name="addPassengerV2Response">
+        <complexType>
+          <sequence>
+            <element name="addPassengerV2Return" nillable="true" type="tns2:ReferenceData"/>
+          </sequence>
+        </complexType>
+      </element>
+      <element name="booking">
+        <complexType>
+          <sequence>
+            <element name="username" nillable="true" type="xsd:string"/>
+            <element name="password" nillable="true" type="xsd:string"/>
+            <element name="lang" nillable="true" type="xsd:string"/>
+            <element name="referencenumber" type="xsd:long"/>
+          </sequence>
+        </complexType>
+      </element>
+      <element name="bookingResponse">
+        <complexType>
+          <sequence>
+            <element name="bookingReturn" nillable="true" type="tns2:BookingData"/>
+          </sequence>
+        </complexType>
+      </element>
+      <element name="preBooking">
+        <complexType>
+          <sequence>
+            <element name="username" nillable="true" type="xsd:string"/>
+            <element name="password" nillable="true" type="xsd:string"/>
+            <element name="lang" nillable="true" type="xsd:string"/>
+            <element name="referencenumber" type="xsd:long"/>
+          </sequence>
+        </complexType>
+      </element>
+      <element name="preBookingResponse">
+        <complexType>
+          <sequence>
+            <element name="preBookingReturn" nillable="true" type="tns2:PreBookingData"/>
+          </sequence>
+        </complexType>
+      </element>
+      <element name="maxServiceFee">
+        <complexType>
+          <sequence>
+            <element name="username" nillable="true" type="xsd:string"/>
+            <element name="password" nillable="true" type="xsd:string"/>
+            <element name="lang" nillable="true" type="xsd:string"/>
+            <element name="direction" nillable="true" type="xsd:string"/>
+            <element name="depvoyagecode" nillable="true" type="xsd:string"/>
+            <element name="depclass" nillable="true" type="xsd:string"/>
+            <element name="retvoyagecode" nillable="true" type="xsd:string"/>
+            <element name="retclass" nillable="true" type="xsd:string"/>
+            <element name="adult" type="xsd:int"/>
+            <element name="child" type="xsd:int"/>
+            <element name="inf" type="xsd:int"/>
+            <element name="ogr" type="xsd:int"/>
+            <element name="tsk" type="xsd:int"/>
+            <element name="yp" type="xsd:int"/>
+            <element name="sc" type="xsd:int"/>
+          </sequence>
+        </complexType>
+      </element>
+      <element name="maxServiceFeeResponse">
+        <complexType>
+          <sequence>
+            <element name="maxServiceFeeReturn" nillable="true" type="tns2:MaxServiceFeeData"/>
+          </sequence>
+        </complexType>
+      </element>
+      <element name="availability">
+        <complexType>
+          <sequence>
+            <element name="username" nillable="true" type="xsd:string"/>
+            <element name="password" nillable="true" type="xsd:string"/>
+            <element name="lang" nillable="true" type="xsd:string"/>
+            <element name="direction" nillable="true" type="xsd:string"/>
+            <element name="origin" nillable="true" type="xsd:string"/>
+            <element name="destination" nillable="true" type="xsd:string"/>
+            <element name="date" nillable="true" type="xsd:string"/>
+            <element name="adult" type="xsd:int"/>
+            <element name="child" type="xsd:int"/>
+            <element name="inf" type="xsd:int"/>
+            <element name="ogr" type="xsd:int"/>
+            <element name="tsk" type="xsd:int"/>
+            <element name="yp" type="xsd:int"/>
+            <element name="sc" type="xsd:int"/>
+          </sequence>
+        </complexType>
+      </element>
+      <complexType name="ArrayOf_747913597_496923140_nillable_TimeTableData">
+        <sequence>
+          <element maxOccurs="unbounded" minOccurs="0" name="TimeTableData" nillable="true" type="tns2:TimeTableData"/>
+        </sequence>
+      </complexType>
+      <complexType name="ArrayOf_747913597_496923140_nillable_PsgrForTicketnumberData">
+        <sequence>
+          <element maxOccurs="unbounded" minOccurs="0" name="PsgrForTicketnumberData" nillable="true" type="tns2:PsgrForTicketnumberData"/>
+        </sequence>
+      </complexType>
+      <complexType name="ArrayOf_747913597_496923140_nillable_PassengersData">
+        <sequence>
+          <element maxOccurs="unbounded" minOccurs="0" name="PassengersData" nillable="true" type="tns2:PassengersData"/>
+        </sequence>
+      </complexType>
+      <complexType name="ArrayOf_747913597_496923140_nillable_OpenJawAirportsData">
+        <sequence>
+          <element maxOccurs="unbounded" minOccurs="0" name="OpenJawAirportsData" nillable="true" type="tns2:OpenJawAirportsData"/>
+        </sequence>
+      </complexType>
+      <complexType name="ArrayOf_747913597_496923140_nillable_AirportsData">
+        <sequence>
+          <element maxOccurs="unbounded" minOccurs="0" name="AirportsData" nillable="true" type="tns2:AirportsData"/>
+        </sequence>
+      </complexType>
+      <complexType name="ArrayOf_747913597_496923140_nillable_ToAirportsData">
+        <sequence>
+          <element maxOccurs="unbounded" minOccurs="0" name="ToAirportsData" nillable="true" type="tns2:ToAirportsData"/>
+        </sequence>
+      </complexType>
+      <complexType name="ArrayOf_747913597_496923140_nillable_LimitInfoData">
+        <sequence>
+          <element maxOccurs="unbounded" minOccurs="0" name="LimitInfoData" nillable="true" type="tns2:LimitInfoData"/>
+        </sequence>
+      </complexType>
+    </schema>
+    <schema attributeFormDefault="unqualified" elementFormDefault="unqualified" targetNamespace="http://data.atlasjetWS" xmlns="http://www.w3.org/2001/XMLSchema">
+      <complexType name="AvailabilityData">
+        <sequence>
+          <element name="flightData" nillable="true" type="tns2:ArrayOfAvailabilityFlightData"/>
+          <element name="systemMessageData" nillable="true" type="tns2:SystemMessageData"/>
+        </sequence>
+      </complexType>
+      <complexType name="AvailabilityFlightData">
+        <sequence>
+          <element name="classData" nillable="true" type="tns2:ArrayOfAvailabilityClassData"/>
+          <element name="message" nillable="true" type="xsd:string"/>
+          <element name="segmentData" nillable="true" type="tns2:ArrayOfAvailabilitySegmentData"/>
+          <element name="voyagecode" nillable="true" type="xsd:string"/>
+        </sequence>
+      </complexType>
+      <complexType name="AvailabilityClassData">
+        <sequence>
+          <element name="adultprice" type="xsd:double"/>
+          <element name="cabinclass" nillable="true" type="xsd:string"/>
+          <element name="childprice" type="xsd:double"/>
+          <element name="classdesc" nillable="true" type="xsd:string"/>
+          <element name="completeclass" nillable="true" type="xsd:string"/>
+          <element name="currency" nillable="true" type="xsd:string"/>
+          <element name="infprice" type="xsd:double"/>
+          <element name="ogrprice" type="xsd:double"/>
+          <element name="scprice" type="xsd:double"/>
+          <element name="seat" type="xsd:int"/>
+          <element name="tskprice" type="xsd:double"/>
+          <element name="viewprice" type="xsd:double"/>
+          <element name="ypprice" type="xsd:double"/>
+          <element name="rulelink" nillable="true" type="xsd:string"/>
+        </sequence>
+      </complexType>
+      <complexType name="ArrayOfAvailabilityClassData">
+        <sequence>
+          <element maxOccurs="unbounded" minOccurs="0" name="AvailabilityClassData" nillable="true" type="tns2:AvailabilityClassData"/>
+        </sequence>
+      </complexType>
+      <complexType name="AvailabilitySegmentData">
+        <sequence>
+          <element name="depdate" nillable="true" type="xsd:string"/>
+          <element name="arrcode" nillable="true" type="xsd:string"/>
+          <element name="arrdesc" nillable="true" type="xsd:string"/>
+          <element name="arrtime" nillable="true" type="xsd:string"/>
+          <element name="depcode" nillable="true" type="xsd:string"/>
+          <element name="depdesc" nillable="true" type="xsd:string"/>
+          <element name="deptime" nillable="true" type="xsd:string"/>
+          <element name="flightno" nillable="true" type="xsd:string"/>
+        </sequence>
+      </complexType>
+      <complexType name="ArrayOfAvailabilitySegmentData">
+        <sequence>
+          <element maxOccurs="unbounded" minOccurs="0" name="AvailabilitySegmentData" nillable="true" type="tns2:AvailabilitySegmentData"/>
+        </sequence>
+      </complexType>
+      <complexType name="ArrayOfAvailabilityFlightData">
+        <sequence>
+          <element maxOccurs="unbounded" minOccurs="0" name="AvailabilityFlightData" nillable="true" type="tns2:AvailabilityFlightData"/>
+        </sequence>
+      </complexType>
+      <complexType name="SystemMessageData">
+        <sequence>
+          <element name="code" nillable="true" type="xsd:string"/>
+          <element name="message" nillable="true" type="xsd:string"/>
+        </sequence>
+      </complexType>
+      <complexType name="TimeTableData">
+        <sequence>
+          <element name="arriveTime" nillable="true" type="xsd:string"/>
+          <element name="departureTime" nillable="true" type="xsd:string"/>
+          <element name="flightNo" nillable="true" type="xsd:string"/>
+          <element name="systemMessageData" nillable="true" type="tns2:SystemMessageData"/>
+        </sequence>
+      </complexType>
+      <complexType name="FareQuoteData">
+        <sequence>
+          <element name="faresData" nillable="true" type="tns2:FareQuoteFaresData"/>
+          <element name="flightData" nillable="true" type="tns2:FareQuoteFlightData"/>
+          <element name="message" nillable="true" type="xsd:string"/>
+          <element name="systemMessageData" nillable="true" type="tns2:SystemMessageData"/>
+        </sequence>
+      </complexType>
+      <complexType name="FareQuoteFaresData">
+        <sequence>
+          <element name="fareData" nillable="true" type="tns2:ArrayOfFareQuoteFareData"/>
+          <element name="grandTotalData" nillable="true" type="tns2:FareQuoteGrandTotalData"/>
+        </sequence>
+      </complexType>
+      <complexType name="FareQuoteFareData">
+        <sequence>
+          <element name="baseprice" type="xsd:double"/>
+          <element name="currency" nillable="true" type="xsd:string"/>
+          <element name="passcount" type="xsd:int"/>
+          <element name="servicefee" type="xsd:double"/>
+          <element name="tax" type="xsd:double"/>
+          <element name="totalprice" type="xsd:double"/>
+          <element name="type" nillable="true" type="xsd:string"/>
+        </sequence>
+      </complexType>
+      <complexType name="ArrayOfFareQuoteFareData">
+        <sequence>
+          <element maxOccurs="unbounded" minOccurs="0" name="FareQuoteFareData" nillable="true" type="tns2:FareQuoteFareData"/>
+        </sequence>
+      </complexType>
+      <complexType name="FareQuoteGrandTotalData">
+        <sequence>
+          <element name="baseprice" type="xsd:double"/>
+          <element name="currency" nillable="true" type="xsd:string"/>
+          <element name="servicefee" type="xsd:double"/>
+          <element name="tax" type="xsd:double"/>
+          <element name="totalprice" type="xsd:double"/>
+          <element name="totalpriceTL" type="xsd:double"/>
+        </sequence>
+      </complexType>
+      <complexType name="FareQuoteFlightData">
+        <sequence>
+          <element name="depData" nillable="true" type="tns2:FareQuoteDepartureData"/>
+          <element name="retData" nillable="true" type="tns2:FareQuoteReturnData"/>
+        </sequence>
+      </complexType>
+      <complexType name="FareQuoteDepartureData">
+        <sequence>
+          <element name="segmentData" nillable="true" type="tns2:ArrayOfFareQuoteSegmentData"/>
+        </sequence>
+      </complexType>
+      <complexType name="FareQuoteSegmentData">
+        <sequence>
+          <element name="arrcode" nillable="true" type="xsd:string"/>
+          <element name="arrdesc" nillable="true" type="xsd:string"/>
+          <element name="arrtime" nillable="true" type="xsd:string"/>
+          <element name="depcode" nillable="true" type="xsd:string"/>
+          <element name="depdesc" nillable="true" type="xsd:string"/>
+          <element name="deptime" nillable="true" type="xsd:string"/>
+          <element name="flightno" nillable="true" type="xsd:string"/>
+          <element name="arrdate" nillable="true" type="xsd:string"/>
+          <element name="depdate" nillable="true" type="xsd:string"/>
+        </sequence>
+      </complexType>
+      <complexType name="ArrayOfFareQuoteSegmentData">
+        <sequence>
+          <element maxOccurs="unbounded" minOccurs="0" name="FareQuoteSegmentData" nillable="true" type="tns2:FareQuoteSegmentData"/>
+        </sequence>
+      </complexType>
+      <complexType name="FareQuoteReturnData">
+        <sequence>
+          <element name="segmentData" nillable="true" type="tns2:ArrayOfFareQuoteSegmentData"/>
+        </sequence>
+      </complexType>
+      <complexType name="CancelPnrPriceData">
+        <sequence>
+          <element name="currency" nillable="true" type="xsd:string"/>
+          <element name="systemMessageData" nillable="true" type="tns2:SystemMessageData"/>
+          <element name="totalBackPrice" type="xsd:double"/>
+          <element name="totalFlightPrice" type="xsd:double"/>
+          <element name="totalPenaltyPrice" type="xsd:double"/>
+          <element name="totalServiceFee" type="xsd:double"/>
+        </sequence>
+      </complexType>
+      <complexType name="PsgrForTicketnumberData">
+        <sequence>
+          <element name="psgrid" type="xsd:int"/>
+          <element name="ticketnumber" nillable="true" type="xsd:string"/>
+          <element name="systemMessageData" nillable="true" type="tns2:SystemMessageData"/>
+        </sequence>
+      </complexType>
+      <complexType name="PassengersData">
+        <sequence>
+          <element name="birthDate" nillable="true" type="xsd:string"/>
+          <element name="countryCode" nillable="true" type="xsd:string"/>
+          <element name="email" nillable="true" type="xsd:string"/>
+          <element name="firstName" nillable="true" type="xsd:string"/>
+          <element name="gender" nillable="true" type="xsd:string"/>
+          <element name="identityNo" nillable="true" type="xsd:string"/>
+          <element name="jetmilCardNo" nillable="true" type="xsd:string"/>
+          <element name="lastName" nillable="true" type="xsd:string"/>
+          <element name="order" nillable="true" type="xsd:string"/>
+          <element name="passaportNo" nillable="true" type="xsd:string"/>
+          <element name="passengerType" nillable="true" type="xsd:string"/>
+          <element name="phoneArea" nillable="true" type="xsd:string"/>
+          <element name="phoneNumber" nillable="true" type="xsd:string"/>
+        </sequence>
+      </complexType>
+      <complexType name="ReferenceData">
+        <sequence>
+          <element name="refnumber" type="xsd:long"/>
+          <element name="systemMessageData" nillable="true" type="tns2:SystemMessageData"/>
+          <element name="faresData" nillable="true" type="tns2:FareQuoteFaresData"/>
+          <element name="flightData" nillable="true" type="tns2:FareQuoteFlightData"/>
+        </sequence>
+      </complexType>
+      <complexType name="CancelPnrData">
+        <sequence>
+          <element name="status" type="xsd:boolean"/>
+          <element name="systemMessageData" nillable="true" type="tns2:SystemMessageData"/>
+        </sequence>
+      </complexType>
+      <complexType name="OpenJawAirportsData">
+        <sequence>
+          <element name="destinationCode" nillable="true" type="xsd:string"/>
+          <element name="destinationName" nillable="true" type="xsd:string"/>
+          <element name="originCode" nillable="true" type="xsd:string"/>
+          <element name="originName" nillable="true" type="xsd:string"/>
+          <element name="systemMessageData" nillable="true" type="tns2:SystemMessageData"/>
+        </sequence>
+      </complexType>
+      <complexType name="JetmilInfoData">
+        <sequence>
+          <element name="birthdate" nillable="true" type="xsd:string"/>
+          <element name="firstName" nillable="true" type="xsd:string"/>
+          <element name="gender" nillable="true" type="xsd:string"/>
+          <element name="lastName" nillable="true" type="xsd:string"/>
+          <element name="systemMessageData" nillable="true" type="tns2:SystemMessageData"/>
+        </sequence>
+      </complexType>
+      <complexType name="AirportsData">
+        <sequence>
+          <element name="code" nillable="true" type="xsd:string"/>
+          <element name="name" nillable="true" type="xsd:string"/>
+          <element name="systemMessageData" nillable="true" type="tns2:SystemMessageData"/>
+        </sequence>
+      </complexType>
+      <complexType name="ToAirportsData">
+        <sequence>
+          <element name="code" nillable="true" type="xsd:string"/>
+          <element name="name" nillable="true" type="xsd:string"/>
+          <element name="systemMessageData" nillable="true" type="tns2:SystemMessageData"/>
+        </sequence>
+      </complexType>
+      <complexType name="LimitInfoData">
+        <sequence>
+          <element name="balance" type="xsd:double"/>
+          <element name="currency" nillable="true" type="xsd:string"/>
+          <element name="systemMessageData" nillable="true" type="tns2:SystemMessageData"/>
+          <element name="totallimit" type="xsd:double"/>
+        </sequence>
+      </complexType>
+      <complexType name="BookingData">
+        <sequence>
+          <element name="bookingTicketData" nillable="true" type="tns2:ArrayOfBookingTicketData"/>
+          <element name="note" nillable="true" type="xsd:string"/>
+          <element name="pnrnumber" nillable="true" type="xsd:string"/>
+          <element name="systemMessageData" nillable="true" type="tns2:SystemMessageData"/>
+        </sequence>
+      </complexType>
+      <complexType name="BookingTicketData">
+        <sequence>
+          <element name="id" nillable="true" type="xsd:string"/>
+          <element name="lang" nillable="true" type="xsd:string"/>
+          <element name="link" nillable="true" type="xsd:string"/>
+          <element name="order" type="xsd:int"/>
+          <element name="ticketNumber" nillable="true" type="xsd:string"/>
+        </sequence>
+      </complexType>
+      <complexType name="ArrayOfBookingTicketData">
+        <sequence>
+          <element maxOccurs="unbounded" minOccurs="0" name="BookingTicketData" nillable="true" type="tns2:BookingTicketData"/>
+        </sequence>
+      </complexType>
+      <complexType name="PreBookingData">
+        <sequence>
+          <element name="pnrnumber" nillable="true" type="xsd:string"/>
+          <element name="note" nillable="true" type="xsd:string"/>
+          <element name="systemMessageData" nillable="true" type="tns2:SystemMessageData"/>
+          <element name="expiredate" nillable="true" type="xsd:string"/>
+          <element name="refnumber" type="xsd:long"/>
+        </sequence>
+      </complexType>
+      <complexType name="MaxServiceFeeData">
+        <sequence>
+          <element name="flightData" nillable="true" type="tns2:FareQuoteFlightData"/>
+          <element name="servicefee" type="xsd:double"/>
+          <element name="currency" nillable="true" type="xsd:string"/>
+          <element name="systemMessageData" nillable="true" type="tns2:SystemMessageData"/>
+        </sequence>
+      </complexType>
+    </schema>
+  </wsdl:types>
+  <wsdl:message name="psgrForTicketNumberRequest">
+    <wsdl:part element="impl:psgrForTicketNumber" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="addPassengerRequest">
+    <wsdl:part element="impl:addPassenger" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="availabilityV3Response">
+    <wsdl:part element="impl:availabilityV3Response" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="availabilityV4Response">
+    <wsdl:part element="impl:availabilityV4Response" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="jetmilInfoRequest">
+    <wsdl:part element="impl:jetmilInfo" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="bookingResponse">
+    <wsdl:part element="impl:bookingResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="maxServiceFeeRequest">
+    <wsdl:part element="impl:maxServiceFee" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="availabilityResponse">
+    <wsdl:part element="impl:availabilityResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="faresResponse">
+    <wsdl:part element="impl:faresResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="toAirportsListRequest">
+    <wsdl:part element="impl:toAirportsList" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="preBookingRequest">
+    <wsdl:part element="impl:preBooking" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="cancelPnrPriceRequest">
+    <wsdl:part element="impl:cancelPnrPrice" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="cancelPnrPriceResponse">
+    <wsdl:part element="impl:cancelPnrPriceResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="timetableResponse">
+    <wsdl:part element="impl:timetableResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="toAirportsListResponse">
+    <wsdl:part element="impl:toAirportsListResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="limitInfoResponse">
+    <wsdl:part element="impl:limitInfoResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="addPassengerResponse">
+    <wsdl:part element="impl:addPassengerResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="airportsListResponse">
+    <wsdl:part element="impl:airportsListResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="bookingRequest">
+    <wsdl:part element="impl:booking" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="jetmilInfoResponse">
+    <wsdl:part element="impl:jetmilInfoResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="psgrForTicketNumberResponse">
+    <wsdl:part element="impl:psgrForTicketNumberResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="airportsListRequest">
+    <wsdl:part element="impl:airportsList" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="maxServiceFeeResponse">
+    <wsdl:part element="impl:maxServiceFeeResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="availabilityV3Request">
+    <wsdl:part element="impl:availabilityV3" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="availabilityV4Request">
+    <wsdl:part element="impl:availabilityV4" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="cancelPnrResponse">
+    <wsdl:part element="impl:cancelPnrResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="limitInfoRequest">
+    <wsdl:part element="impl:limitInfo" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="openJawAirportsListResponse">
+    <wsdl:part element="impl:openJawAirportsListResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="addPassengerV2Request">
+    <wsdl:part element="impl:addPassengerV2" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="timetableRequest">
+    <wsdl:part element="impl:timetable" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="availabilityRequest">
+    <wsdl:part element="impl:availability" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="preBookingResponse">
+    <wsdl:part element="impl:preBookingResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="openJawAirportsListRequest">
+    <wsdl:part element="impl:openJawAirportsList" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="faresRequest">
+    <wsdl:part element="impl:fares" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="addPassengerV2Response">
+    <wsdl:part element="impl:addPassengerV2Response" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="cancelPnrRequest">
+    <wsdl:part element="impl:cancelPnr" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="Atlasjet">
+    <wsdl:operation name="availability">
+      <wsdl:input message="impl:availabilityRequest" name="availabilityRequest"></wsdl:input>
+      <wsdl:output message="impl:availabilityResponse" name="availabilityResponse"></wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="availabilityV3">
+      <wsdl:input message="impl:availabilityV3Request" name="availabilityV3Request"/>
+      <wsdl:output message="impl:availabilityV3Response" name="availabilityV3Response"/>
+    </wsdl:operation>
+    <wsdl:operation name="availabilityV4">
+      <wsdl:input message="impl:availabilityV4Request" name="availabilityV4Request"/>
+      <wsdl:output message="impl:availabilityV4Response" name="availabilityV4Response"/>
+    </wsdl:operation>
+    <wsdl:operation name="timetable">
+      <wsdl:input message="impl:timetableRequest" name="timetableRequest"></wsdl:input>
+      <wsdl:output message="impl:timetableResponse" name="timetableResponse"></wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="fares">
+      <wsdl:input message="impl:faresRequest" name="faresRequest"></wsdl:input>
+      <wsdl:output message="impl:faresResponse" name="faresResponse"></wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="cancelPnrPrice">
+      <wsdl:input message="impl:cancelPnrPriceRequest" name="cancelPnrPriceRequest"></wsdl:input>
+      <wsdl:output message="impl:cancelPnrPriceResponse" name="cancelPnrPriceResponse"></wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="psgrForTicketNumber">
+      <wsdl:input message="impl:psgrForTicketNumberRequest" name="psgrForTicketNumberRequest"></wsdl:input>
+      <wsdl:output message="impl:psgrForTicketNumberResponse" name="psgrForTicketNumberResponse"></wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="addPassenger">
+      <wsdl:input message="impl:addPassengerRequest" name="addPassengerRequest"></wsdl:input>
+      <wsdl:output message="impl:addPassengerResponse" name="addPassengerResponse"></wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="cancelPnr">
+      <wsdl:input message="impl:cancelPnrRequest" name="cancelPnrRequest"></wsdl:input>
+      <wsdl:output message="impl:cancelPnrResponse" name="cancelPnrResponse"></wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="openJawAirportsList">
+      <wsdl:input message="impl:openJawAirportsListRequest" name="openJawAirportsListRequest"></wsdl:input>
+      <wsdl:output message="impl:openJawAirportsListResponse" name="openJawAirportsListResponse"></wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="jetmilInfo">
+      <wsdl:input message="impl:jetmilInfoRequest" name="jetmilInfoRequest"></wsdl:input>
+      <wsdl:output message="impl:jetmilInfoResponse" name="jetmilInfoResponse"></wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="airportsList">
+      <wsdl:input message="impl:airportsListRequest" name="airportsListRequest"></wsdl:input>
+      <wsdl:output message="impl:airportsListResponse" name="airportsListResponse"></wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="toAirportsList">
+      <wsdl:input message="impl:toAirportsListRequest" name="toAirportsListRequest"></wsdl:input>
+      <wsdl:output message="impl:toAirportsListResponse" name="toAirportsListResponse"></wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="limitInfo">
+      <wsdl:input message="impl:limitInfoRequest" name="limitInfoRequest"></wsdl:input>
+      <wsdl:output message="impl:limitInfoResponse" name="limitInfoResponse"></wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="addPassengerV2">
+      <wsdl:input message="impl:addPassengerV2Request" name="addPassengerV2Request"></wsdl:input>
+      <wsdl:output message="impl:addPassengerV2Response" name="addPassengerV2Response"></wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="booking">
+      <wsdl:input message="impl:bookingRequest" name="bookingRequest"></wsdl:input>
+      <wsdl:output message="impl:bookingResponse" name="bookingResponse"></wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="preBooking">
+      <wsdl:input message="impl:preBookingRequest" name="preBookingRequest"></wsdl:input>
+      <wsdl:output message="impl:preBookingResponse" name="preBookingResponse"></wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="maxServiceFee">
+      <wsdl:input message="impl:maxServiceFeeRequest" name="maxServiceFeeRequest"></wsdl:input>
+      <wsdl:output message="impl:maxServiceFeeResponse" name="maxServiceFeeResponse"></wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="AtlasjetSoapBinding" type="impl:Atlasjet">
+    <wsaw:UsingAddressing wsdl:required="false" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl"/>
+    <wsdlsoap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="availability">
+      <wsdlsoap:operation soapAction="availability"/>
+      <wsdl:input name="availabilityRequest">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="availabilityResponse">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="availabilityV3">
+      <wsdlsoap:operation soapAction="availabilityV3"/>
+      <wsdl:input name="availabilityV3Request">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="availabilityV3Response">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="availabilityV4">
+      <wsdlsoap:operation soapAction="availabilityV4"/>
+      <wsdl:input name="availabilityV4Request">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="availabilityV4Response">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="timetable">
+      <wsdlsoap:operation soapAction="timetable"/>
+      <wsdl:input name="timetableRequest">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="timetableResponse">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="fares">
+      <wsdlsoap:operation soapAction="fares"/>
+      <wsdl:input name="faresRequest">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="faresResponse">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="cancelPnrPrice">
+      <wsdlsoap:operation soapAction="cancelPnrPrice"/>
+      <wsdl:input name="cancelPnrPriceRequest">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="cancelPnrPriceResponse">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="psgrForTicketNumber">
+      <wsdlsoap:operation soapAction="psgrForTicketNumber"/>
+      <wsdl:input name="psgrForTicketNumberRequest">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="psgrForTicketNumberResponse">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="addPassenger">
+      <wsdlsoap:operation soapAction="addPassenger"/>
+      <wsdl:input name="addPassengerRequest">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="addPassengerResponse">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="cancelPnr">
+      <wsdlsoap:operation soapAction="cancelPnr"/>
+      <wsdl:input name="cancelPnrRequest">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="cancelPnrResponse">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="openJawAirportsList">
+      <wsdlsoap:operation soapAction="openJawAirportsList"/>
+      <wsdl:input name="openJawAirportsListRequest">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="openJawAirportsListResponse">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="jetmilInfo">
+      <wsdlsoap:operation soapAction="jetmilInfo"/>
+      <wsdl:input name="jetmilInfoRequest">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="jetmilInfoResponse">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="airportsList">
+      <wsdlsoap:operation soapAction="airportsList"/>
+      <wsdl:input name="airportsListRequest">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="airportsListResponse">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="toAirportsList">
+      <wsdlsoap:operation soapAction="toAirportsList"/>
+      <wsdl:input name="toAirportsListRequest">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="toAirportsListResponse">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="limitInfo">
+      <wsdlsoap:operation soapAction="limitInfo"/>
+      <wsdl:input name="limitInfoRequest">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="limitInfoResponse">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="addPassengerV2">
+      <wsdlsoap:operation soapAction="addPassengerV2"/>
+      <wsdl:input name="addPassengerV2Request">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="addPassengerV2Response">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="booking">
+      <wsdlsoap:operation soapAction="booking"/>
+      <wsdl:input name="bookingRequest">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="bookingResponse">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="preBooking">
+      <wsdlsoap:operation soapAction="preBooking"/>
+      <wsdl:input name="preBookingRequest">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="preBookingResponse">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="maxServiceFee">
+      <wsdlsoap:operation soapAction="maxServiceFee"/>
+      <wsdl:input name="maxServiceFeeRequest">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="maxServiceFeeResponse">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="AtlasjetService">
+    <wsdl:port binding="impl:AtlasjetSoapBinding" name="Atlasjet">
+      <wsdlsoap:address location="https://ws.atlasglb.com/ADSAGENCYWS/services/Atlasjet"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>https://ws.atlasglb.com/ADSAGENCYWS/services/Atlasjet</con:endpoint></con:endpoints><con:operation isOneWay="false" action="addPassenger" name="addPassenger" bindingOperationName="addPassenger" type="Request-Response" outputName="addPassengerResponse" inputName="addPassengerRequest" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>https://ws.atlasglb.com/ADSAGENCYWS/services/Atlasjet</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:web="http://webSrv.atlasjetWS">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <web:addPassenger>
+         <username>?</username>
+         <password>?</password>
+         <lang>?</lang>
+         <direction>?</direction>
+         <depvoyagecode>?</depvoyagecode>
+         <depclass>?</depclass>
+         <retvoyagecode>?</retvoyagecode>
+         <retclass>?</retclass>
+         <passengers>
+            <!--Zero or more repetitions:-->
+            <PassengersData>
+               <birthDate>?</birthDate>
+               <countryCode>?</countryCode>
+               <email>?</email>
+               <firstName>?</firstName>
+               <gender>?</gender>
+               <identityNo>?</identityNo>
+               <jetmilCardNo>?</jetmilCardNo>
+               <lastName>?</lastName>
+               <order>?</order>
+               <passaportNo>?</passaportNo>
+               <passengerType>?</passengerType>
+               <phoneArea>?</phoneArea>
+               <phoneNumber>?</phoneNumber>
+            </PassengersData>
+         </passengers>
+      </web:addPassenger>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="addPassenger"/></con:call></con:operation><con:operation isOneWay="false" action="addPassengerV2" name="addPassengerV2" bindingOperationName="addPassengerV2" type="Request-Response" outputName="addPassengerV2Response" inputName="addPassengerV2Request" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>https://ws.atlasglb.com/ADSAGENCYWS/services/Atlasjet</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:web="http://webSrv.atlasjetWS">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <web:addPassengerV2>
+         <username>?</username>
+         <password>?</password>
+         <lang>?</lang>
+         <direction>?</direction>
+         <depvoyagecode>?</depvoyagecode>
+         <depclass>?</depclass>
+         <retvoyagecode>?</retvoyagecode>
+         <retclass>?</retclass>
+         <passengers>
+            <!--Zero or more repetitions:-->
+            <PassengersData>
+               <birthDate>?</birthDate>
+               <countryCode>?</countryCode>
+               <email>?</email>
+               <firstName>?</firstName>
+               <gender>?</gender>
+               <identityNo>?</identityNo>
+               <jetmilCardNo>?</jetmilCardNo>
+               <lastName>?</lastName>
+               <order>?</order>
+               <passaportNo>?</passaportNo>
+               <passengerType>?</passengerType>
+               <phoneArea>?</phoneArea>
+               <phoneNumber>?</phoneNumber>
+            </PassengersData>
+         </passengers>
+      </web:addPassengerV2>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="addPassengerV2"/></con:call></con:operation><con:operation isOneWay="false" action="airportsList" name="airportsList" bindingOperationName="airportsList" type="Request-Response" outputName="airportsListResponse" inputName="airportsListRequest" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>https://ws.atlasglb.com/ADSAGENCYWS/services/Atlasjet</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:web="http://webSrv.atlasjetWS">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <web:airportsList>
+         <username>?</username>
+         <password>?</password>
+         <lang>?</lang>
+      </web:airportsList>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="airportsList"/></con:call></con:operation><con:operation isOneWay="false" action="availability" name="availability" bindingOperationName="availability" type="Request-Response" outputName="availabilityResponse" inputName="availabilityRequest" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>https://ws.atlasglb.com/ADSAGENCYWS/services/Atlasjet</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:web="http://webSrv.atlasjetWS">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <web:availability>
+         <username>?</username>
+         <password>?</password>
+         <lang>?</lang>
+         <direction>?</direction>
+         <origin>?</origin>
+         <destination>?</destination>
+         <date>?</date>
+         <adult>?</adult>
+         <child>?</child>
+         <inf>?</inf>
+         <ogr>?</ogr>
+         <tsk>?</tsk>
+         <yp>?</yp>
+         <sc>?</sc>
+      </web:availability>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="availability"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation isOneWay="false" action="availabilityV3" name="availabilityV3" bindingOperationName="availabilityV3" type="Request-Response" outputName="availabilityV3Response" inputName="availabilityV3Request" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>https://ws.atlasglb.com/ADSAGENCYWS/services/Atlasjet</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:web="http://webSrv.atlasjetWS">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <web:availabilityV3>
+         <username>?</username>
+         <password>?</password>
+         <lang>?</lang>
+         <direction>?</direction>
+         <origin>?</origin>
+         <destination>?</destination>
+         <date>?</date>
+         <adult>?</adult>
+         <child>?</child>
+         <inf>?</inf>
+         <ogr>?</ogr>
+         <tsk>?</tsk>
+         <yp>?</yp>
+         <sc>?</sc>
+         <triptype>?</triptype>
+      </web:availabilityV3>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="availabilityV3"/></con:call></con:operation><con:operation isOneWay="false" action="availabilityV4" name="availabilityV4" bindingOperationName="availabilityV4" type="Request-Response" outputName="availabilityV4Response" inputName="availabilityV4Request" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>https://ws.atlasglb.com/ADSAGENCYWS/services/Atlasjet</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:web="http://webSrv.atlasjetWS">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <web:availabilityV4>
+         <username>?</username>
+         <password>?</password>
+         <lang>?</lang>
+         <direction>?</direction>
+         <origin>?</origin>
+         <destination>?</destination>
+         <depdate>?</depdate>
+         <retdate>?</retdate>
+         <adult>?</adult>
+         <child>?</child>
+         <inf>?</inf>
+         <ogr>?</ogr>
+         <tsk>?</tsk>
+         <yp>?</yp>
+         <sc>?</sc>
+         <triptype>?</triptype>
+      </web:availabilityV4>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="availabilityV4"/></con:call></con:operation><con:operation isOneWay="false" action="booking" name="booking" bindingOperationName="booking" type="Request-Response" outputName="bookingResponse" inputName="bookingRequest" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>https://ws.atlasglb.com/ADSAGENCYWS/services/Atlasjet</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:web="http://webSrv.atlasjetWS">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <web:booking>
+         <username>?</username>
+         <password>?</password>
+         <lang>?</lang>
+         <referencenumber>?</referencenumber>
+      </web:booking>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="booking"/></con:call></con:operation><con:operation isOneWay="false" action="cancelPnr" name="cancelPnr" bindingOperationName="cancelPnr" type="Request-Response" outputName="cancelPnrResponse" inputName="cancelPnrRequest" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>https://ws.atlasglb.com/ADSAGENCYWS/services/Atlasjet</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:web="http://webSrv.atlasjetWS">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <web:cancelPnr>
+         <username>?</username>
+         <password>?</password>
+         <lang>?</lang>
+         <pnrno>?</pnrno>
+         <lastname>?</lastname>
+      </web:cancelPnr>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="cancelPnr"/></con:call></con:operation><con:operation isOneWay="false" action="cancelPnrPrice" name="cancelPnrPrice" bindingOperationName="cancelPnrPrice" type="Request-Response" outputName="cancelPnrPriceResponse" inputName="cancelPnrPriceRequest" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>https://ws.atlasglb.com/ADSAGENCYWS/services/Atlasjet</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:web="http://webSrv.atlasjetWS">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <web:cancelPnrPrice>
+         <username>?</username>
+         <password>?</password>
+         <lang>?</lang>
+         <pnrno>?</pnrno>
+         <lastname>?</lastname>
+      </web:cancelPnrPrice>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="cancelPnrPrice"/></con:call></con:operation><con:operation isOneWay="false" action="fares" name="fares" bindingOperationName="fares" type="Request-Response" outputName="faresResponse" inputName="faresRequest" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>https://ws.atlasglb.com/ADSAGENCYWS/services/Atlasjet</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:web="http://webSrv.atlasjetWS">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <web:fares>
+         <username>?</username>
+         <password>?</password>
+         <lang>?</lang>
+         <direction>?</direction>
+         <depvoyagecode>?</depvoyagecode>
+         <depclass>?</depclass>
+         <retvoyagecode>?</retvoyagecode>
+         <retclass>?</retclass>
+         <adult>?</adult>
+         <child>?</child>
+         <inf>?</inf>
+         <ogr>?</ogr>
+         <tsk>?</tsk>
+         <yp>?</yp>
+         <sc>?</sc>
+      </web:fares>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="fares"/></con:call></con:operation><con:operation isOneWay="false" action="jetmilInfo" name="jetmilInfo" bindingOperationName="jetmilInfo" type="Request-Response" outputName="jetmilInfoResponse" inputName="jetmilInfoRequest" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>https://ws.atlasglb.com/ADSAGENCYWS/services/Atlasjet</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:web="http://webSrv.atlasjetWS">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <web:jetmilInfo>
+         <username>?</username>
+         <password>?</password>
+         <lang>?</lang>
+         <jetmilnumber>?</jetmilnumber>
+      </web:jetmilInfo>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="jetmilInfo"/></con:call></con:operation><con:operation isOneWay="false" action="limitInfo" name="limitInfo" bindingOperationName="limitInfo" type="Request-Response" outputName="limitInfoResponse" inputName="limitInfoRequest" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>https://ws.atlasglb.com/ADSAGENCYWS/services/Atlasjet</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:web="http://webSrv.atlasjetWS">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <web:limitInfo>
+         <username>?</username>
+         <password>?</password>
+         <lang>?</lang>
+      </web:limitInfo>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="limitInfo"/></con:call></con:operation><con:operation isOneWay="false" action="maxServiceFee" name="maxServiceFee" bindingOperationName="maxServiceFee" type="Request-Response" outputName="maxServiceFeeResponse" inputName="maxServiceFeeRequest" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>https://ws.atlasglb.com/ADSAGENCYWS/services/Atlasjet</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:web="http://webSrv.atlasjetWS">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <web:maxServiceFee>
+         <username>?</username>
+         <password>?</password>
+         <lang>?</lang>
+         <direction>?</direction>
+         <depvoyagecode>?</depvoyagecode>
+         <depclass>?</depclass>
+         <retvoyagecode>?</retvoyagecode>
+         <retclass>?</retclass>
+         <adult>?</adult>
+         <child>?</child>
+         <inf>?</inf>
+         <ogr>?</ogr>
+         <tsk>?</tsk>
+         <yp>?</yp>
+         <sc>?</sc>
+      </web:maxServiceFee>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="maxServiceFee"/></con:call></con:operation><con:operation isOneWay="false" action="openJawAirportsList" name="openJawAirportsList" bindingOperationName="openJawAirportsList" type="Request-Response" outputName="openJawAirportsListResponse" inputName="openJawAirportsListRequest" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>https://ws.atlasglb.com/ADSAGENCYWS/services/Atlasjet</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:web="http://webSrv.atlasjetWS">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <web:openJawAirportsList>
+         <originCode>?</originCode>
+         <destinationCode>?</destinationCode>
+         <username>?</username>
+         <password>?</password>
+         <lang>?</lang>
+      </web:openJawAirportsList>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="openJawAirportsList"/></con:call></con:operation><con:operation isOneWay="false" action="preBooking" name="preBooking" bindingOperationName="preBooking" type="Request-Response" outputName="preBookingResponse" inputName="preBookingRequest" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>https://ws.atlasglb.com/ADSAGENCYWS/services/Atlasjet</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:web="http://webSrv.atlasjetWS">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <web:preBooking>
+         <username>?</username>
+         <password>?</password>
+         <lang>?</lang>
+         <referencenumber>?</referencenumber>
+      </web:preBooking>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="preBooking"/></con:call></con:operation><con:operation isOneWay="false" action="psgrForTicketNumber" name="psgrForTicketNumber" bindingOperationName="psgrForTicketNumber" type="Request-Response" outputName="psgrForTicketNumberResponse" inputName="psgrForTicketNumberRequest" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>https://ws.atlasglb.com/ADSAGENCYWS/services/Atlasjet</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:web="http://webSrv.atlasjetWS">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <web:psgrForTicketNumber>
+         <username>?</username>
+         <password>?</password>
+         <lang>?</lang>
+         <locator>?</locator>
+      </web:psgrForTicketNumber>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="psgrForTicketNumber"/></con:call></con:operation><con:operation isOneWay="false" action="timetable" name="timetable" bindingOperationName="timetable" type="Request-Response" outputName="timetableResponse" inputName="timetableRequest" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>https://ws.atlasglb.com/ADSAGENCYWS/services/Atlasjet</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:web="http://webSrv.atlasjetWS">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <web:timetable>
+         <username>?</username>
+         <password>?</password>
+         <lang>?</lang>
+         <origin>?</origin>
+         <destination>?</destination>
+         <flightdate>?</flightdate>
+      </web:timetable>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="timetable"/></con:call></con:operation><con:operation isOneWay="false" action="toAirportsList" name="toAirportsList" bindingOperationName="toAirportsList" type="Request-Response" outputName="toAirportsListResponse" inputName="toAirportsListRequest" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>https://ws.atlasglb.com/ADSAGENCYWS/services/Atlasjet</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:web="http://webSrv.atlasjetWS">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <web:toAirportsList>
+         <originCode>?</originCode>
+         <username>?</username>
+         <password>?</password>
+         <lang>?</lang>
+      </web:toAirportsList>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="toAirportsList"/></con:call></con:operation></con:interface><con:properties/><con:wssContainer/></con:soapui-project>
