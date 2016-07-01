@@ -395,9 +395,17 @@ namespace BurakWcfService.Air.SunExpress.Service
 
                 //SunExpressXMLServiceReference.CraneOTAService cc = new SunExpressXMLServiceReference.CraneOTAService();
                 //var resp = cc.Ping(new SunExpressXMLServiceReference.OTA_PingRQType() { SequenceNmbr = 1, TimeStamp = "1", EchoData = "this is a ping." });
+                 var basicHttpBinding = new BasicHttpBinding(BasicHttpSecurityMode.TransportWithMessageCredential);
+                    basicHttpBinding.Security.Message.ClientCredentialType = BasicHttpMessageCredentialType.UserName;
+                    basicHttpBinding.SendTimeout = new System.TimeSpan(0, 5, 0);
 
-                using (SunExpressServiceReference.CraneOTAServicePortTypeClient client = new SunExpressServiceReference.CraneOTAServicePortTypeClient("CraneOTAServiceSOAP11port_http2"))
+                    //https://ota.sunexpress.com/axis2/services/CraneOTAServiceExtended?wsdl
+                using (SunExpressServiceReference.CraneOTAServicePortTypeClient client = new SunExpressServiceReference.CraneOTAServicePortTypeClient(basicHttpBinding,new EndpointAddress( "https://ota.sunexpress.com:80/axis2/services/CraneOTAService?wsdl")))
                 {
+
+                     client.ClientCredentials.UserName.UserName = "NUANSXML";
+                    client.ClientCredentials.UserName.Password = "AVWJ1E";
+
                     ////header = new SunExpressSoapHeader(username, password);
                     //using (new OperationContextScope(client.InnerChannel))
                     //{
@@ -421,11 +429,7 @@ namespace BurakWcfService.Air.SunExpress.Service
                     //    var res = client.Ping(new SunExpressServiceReference.OTA_PingRQType() { SequenceNmbr = 1, TimeStamp = "1", EchoData = "this is a ping." });
                     //}
 
-                    var basicHttpBinding = new BasicHttpBinding(BasicHttpSecurityMode.TransportWithMessageCredential);
-                    basicHttpBinding.Security.Message.ClientCredentialType = BasicHttpMessageCredentialType.UserName;
-
-                    client.ClientCredentials.UserName.UserName = "NUANSXML";
-                    client.ClientCredentials.UserName.Password = "AVWJ1E";
+                   
 
                     using (new OperationContextScope(client.InnerChannel))
                     {
