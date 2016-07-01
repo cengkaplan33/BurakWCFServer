@@ -311,12 +311,98 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
+    <Content Include="Service References\TestSunExpressServiceReference\BurakWcfService.TestSunExpressServiceReference.AvailabilityResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\TestSunExpressServiceReference\BurakWcfService.TestSunExpressServiceReference.BookingModifyInquiryResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\TestSunExpressServiceReference\BurakWcfService.TestSunExpressServiceReference.BookingModifyResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\TestSunExpressServiceReference\BurakWcfService.TestSunExpressServiceReference.BookingResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\TestSunExpressServiceReference\BurakWcfService.TestSunExpressServiceReference.CalculateServiceChargeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\TestSunExpressServiceReference\BurakWcfService.TestSunExpressServiceReference.CancelReservationResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\TestSunExpressServiceReference\BurakWcfService.TestSunExpressServiceReference.CateringAvailabilityResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\TestSunExpressServiceReference\BurakWcfService.TestSunExpressServiceReference.FareDisplayResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\TestSunExpressServiceReference\BurakWcfService.TestSunExpressServiceReference.FlightSearchResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\TestSunExpressServiceReference\BurakWcfService.TestSunExpressServiceReference.OTA_AirAvailRSType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\TestSunExpressServiceReference\BurakWcfService.TestSunExpressServiceReference.OTA_AirBookRSType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\TestSunExpressServiceReference\BurakWcfService.TestSunExpressServiceReference.OTA_AirFareDisplayRSType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\TestSunExpressServiceReference\BurakWcfService.TestSunExpressServiceReference.OTA_AirFlightSearchRSType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\TestSunExpressServiceReference\BurakWcfService.TestSunExpressServiceReference.OTA_BookingModifyInquiryRSType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\TestSunExpressServiceReference\BurakWcfService.TestSunExpressServiceReference.OTA_CancelRSType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\TestSunExpressServiceReference\BurakWcfService.TestSunExpressServiceReference.OTA_CateringAvailRSType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\TestSunExpressServiceReference\BurakWcfService.TestSunExpressServiceReference.OTA_PingRSType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\TestSunExpressServiceReference\BurakWcfService.TestSunExpressServiceReference.OTA_RetrieveSeatMapRSType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\TestSunExpressServiceReference\BurakWcfService.TestSunExpressServiceReference.OTA_ServiceChargeRSType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\TestSunExpressServiceReference\BurakWcfService.TestSunExpressServiceReference.OTA_WBagAvailRSType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\TestSunExpressServiceReference\BurakWcfService.TestSunExpressServiceReference.PingResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\TestSunExpressServiceReference\BurakWcfService.TestSunExpressServiceReference.ReadReservationResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\TestSunExpressServiceReference\BurakWcfService.TestSunExpressServiceReference.RetrieveSeatMapResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\TestSunExpressServiceReference\BurakWcfService.TestSunExpressServiceReference.TicketReservationResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\TestSunExpressServiceReference\BurakWcfService.TestSunExpressServiceReference.WBagAvailabilityResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Service References\TestSunExpressServiceReference\configuration91.svcinfo" />
+    <None Include="Service References\TestSunExpressServiceReference\configuration.svcinfo" />
+    <None Include="Service References\TestSunExpressServiceReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
     <Content Include="ServiceHello.svc" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Air\SunExpress\dsada.cs" />
     <Compile Include="Air\SunExpress\Services\Fare\SunExpress.cs" />
+    <Compile Include="Service References\TestSunExpressServiceReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <Compile Include="Web References\SunExpressXMLServiceReference\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -406,6 +492,8 @@
   <ItemGroup>
     <None Include="Service References\OnurAirCraneOTAService\CraneOTAService.wsdl" />
     <None Include="Service References\SunExpressServiceReference\CraneOTAService.wsdl" />
+    <None Include="Service References\TestSunExpressServiceReference\CraneOTAServiceExtended.wsdl" />
+    <Content Include="TreevooWeb.config" />
     <None Include="Web References\SunExpressXMLServiceReference\CraneOTAService.wsdl" />
     <Content Include="Web References\SunExpressXMLServiceReference\OTA_AirAvailRSType.datasource">
       <DependentUpon>Reference.map</DependentUpon>
@@ -441,6 +529,7 @@
     <WCFMetadataStorage Include="Service References\BoraJetServiceReference\" />
     <WCFMetadataStorage Include="Service References\OnurAirCraneOTAService\" />
     <WCFMetadataStorage Include="Service References\SunExpressServiceReference\" />
+    <WCFMetadataStorage Include="Service References\TestSunExpressServiceReference\" />
   </ItemGroup>
   <ItemGroup>
     <WebReferences Include="Web References\" />

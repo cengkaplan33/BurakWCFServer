@@ -348,6 +348,36 @@ namespace BurakWcfService.Air.SunExpress.Service
 
             AvailabilityFightListResponse response = new AvailabilityFightListResponse();
 
+
+            //try
+            //{
+
+            //    var basicHttpBinding = new BasicHttpBinding(BasicHttpSecurityMode.TransportWithMessageCredential);
+            //    basicHttpBinding.Security.Message.ClientCredentialType = BasicHttpMessageCredentialType.UserName;
+            //    basicHttpBinding.SendTimeout = new System.TimeSpan(0, 5, 0);
+
+            //    SunExpressCraneOTAServiceExtendedServiceReference.CraneOTAServiceExtendedPortTypeClient client = new SunExpressCraneOTAServiceExtendedServiceReference.CraneOTAServiceExtendedPortTypeClient(basicHttpBinding, new EndpointAddress("https://ota.sunexpress.com/axis2/services/CraneOTAServiceExtended?wsdl"));
+
+            //    client.ClientCredentials.UserName.UserName = "NUANSXML";
+            //    client.ClientCredentials.UserName.Password = "AVWJ1E";
+
+            //    if (client.InnerChannel.State != System.ServiceModel.CommunicationState.Faulted)
+            //    {
+            //        var res = client.Ping(new SunExpressCraneOTAServiceExtendedServiceReference.OTA_PingRQType() { SequenceNmbr = 1, TimeStamp = "1", EchoData = "this is a ping." });
+            //    }
+            //    else
+            //    {
+            //        client = new SunExpressCraneOTAServiceExtendedServiceReference.CraneOTAServiceExtendedPortTypeClient(basicHttpBinding, new EndpointAddress("https://ota.sunexpress.com/axis2/services/CraneOTAServiceExtended?wsdl"));
+            //        client.ClientCredentials.UserName.UserName = "NUANSXML";
+            //        client.ClientCredentials.UserName.Password = "AVWJ1E";
+
+            //        var res = client.Ping(new SunExpressCraneOTAServiceExtendedServiceReference.OTA_PingRQType() { SequenceNmbr = 1, TimeStamp = "1", EchoData = "this is a ping." });
+
+            //    }
+            //}catch  ()
+            //{
+            //}
+
             try
             {
                 //SunExpressXMLServiceReference.CraneOTAService cc = new SunExpressXMLServiceReference.CraneOTAService();
@@ -375,17 +405,17 @@ namespace BurakWcfService.Air.SunExpress.Service
                 try
                 {
 
-                
-                //SunExpressServiceReference.CraneOTAServicePortTypeClient xc = new SunExpressServiceReference.CraneOTAServicePortTypeClient("CraneOTAServiceSOAP12port_http2");
 
-                //var basicHttpBinding = new BasicHttpBinding(BasicHttpSecurityMode.TransportWithMessageCredential);
-                //basicHttpBinding.Security.Message.ClientCredentialType = BasicHttpMessageCredentialType.UserName;
+                    //SunExpressServiceReference.CraneOTAServicePortTypeClient xc = new SunExpressServiceReference.CraneOTAServicePortTypeClient("CraneOTAServiceSOAP12port_http2");
 
-                //xc.ClientCredentials.UserName.UserName = "NUANSXML";
-                //xc.ClientCredentials.UserName.Password = "AVWJ1E";
+                    //var basicHttpBinding = new BasicHttpBinding(BasicHttpSecurityMode.TransportWithMessageCredential);
+                    //basicHttpBinding.Security.Message.ClientCredentialType = BasicHttpMessageCredentialType.UserName;
+
+                    //xc.ClientCredentials.UserName.UserName = "NUANSXML";
+                    //xc.ClientCredentials.UserName.Password = "AVWJ1E";
 
 
-                //xc.Ping(new SunExpressServiceReference.OTA_PingRQType() { SequenceNmbr = 1, TimeStamp = "1", EchoData = "this is a ping." });
+                    //xc.Ping(new SunExpressServiceReference.OTA_PingRQType() { SequenceNmbr = 1, TimeStamp = "1", EchoData = "this is a ping." });
 
                 }
                 catch (System.Exception)
@@ -395,15 +425,15 @@ namespace BurakWcfService.Air.SunExpress.Service
 
                 //SunExpressXMLServiceReference.CraneOTAService cc = new SunExpressXMLServiceReference.CraneOTAService();
                 //var resp = cc.Ping(new SunExpressXMLServiceReference.OTA_PingRQType() { SequenceNmbr = 1, TimeStamp = "1", EchoData = "this is a ping." });
-                 var basicHttpBinding = new BasicHttpBinding(BasicHttpSecurityMode.TransportWithMessageCredential);
-                    basicHttpBinding.Security.Message.ClientCredentialType = BasicHttpMessageCredentialType.UserName;
-                    basicHttpBinding.SendTimeout = new System.TimeSpan(0, 5, 0);
+                var basicHttpBinding = new BasicHttpBinding(BasicHttpSecurityMode.TransportWithMessageCredential);
+                basicHttpBinding.Security.Message.ClientCredentialType = BasicHttpMessageCredentialType.UserName;
+                basicHttpBinding.SendTimeout = new System.TimeSpan(0, 5, 0);
 
-                    //https://ota.sunexpress.com/axis2/services/CraneOTAServiceExtended?wsdl
-                using (SunExpressServiceReference.CraneOTAServicePortTypeClient client = new SunExpressServiceReference.CraneOTAServicePortTypeClient(basicHttpBinding,new EndpointAddress( "https://ota.sunexpress.com:80/axis2/services/CraneOTAService?wsdl")))
+                //https://ota.sunexpress.com/axis2/services/CraneOTAServiceExtended?wsdl
+                using (SunExpressServiceReference.CraneOTAServicePortTypeClient client = new SunExpressServiceReference.CraneOTAServicePortTypeClient(basicHttpBinding, new EndpointAddress("https://ota.sunexpress.com:80/axis2/services/CraneOTAService?wsdl")))
                 {
 
-                     client.ClientCredentials.UserName.UserName = "NUANSXML";
+                    client.ClientCredentials.UserName.UserName = "NUANSXML";
                     client.ClientCredentials.UserName.Password = "AVWJ1E";
 
                     ////header = new SunExpressSoapHeader(username, password);
@@ -429,7 +459,7 @@ namespace BurakWcfService.Air.SunExpress.Service
                     //    var res = client.Ping(new SunExpressServiceReference.OTA_PingRQType() { SequenceNmbr = 1, TimeStamp = "1", EchoData = "this is a ping." });
                     //}
 
-                   
+
 
                     using (new OperationContextScope(client.InnerChannel))
                     {
@@ -441,11 +471,11 @@ namespace BurakWcfService.Air.SunExpress.Service
 
                         OperationContext.Current.OutgoingMessageProperties[HttpRequestMessageProperty.Name] = requestMessage;
 
-                        MessageHeader aMessageHeader = MessageHeader.CreateHeader("wsse:Security","", header);
+                        MessageHeader aMessageHeader = MessageHeader.CreateHeader("wsse:Security", "", header);
                         OperationContext.Current.OutgoingMessageHeaders.Add(aMessageHeader);
 
 
-                     
+
 
 
                         var res = client.Ping(new SunExpressServiceReference.OTA_PingRQType() { SequenceNmbr = 1, TimeStamp = "1", EchoData = "this is a ping." });

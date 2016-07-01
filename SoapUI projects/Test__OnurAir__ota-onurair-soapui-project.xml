@@ -1330,4 +1330,4 @@
          </ota:SpecialServiceRequests>
       </otab:OTA_TicketReservationRQ>
    </soap:Body>
-</soap:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="/TicketReservation"/></con:call></con:operation></con:interface><con:properties/><con:wssContainer/></con:soapui-project>
+</soap:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="/TicketReservation"/></con:call></con:operation></con:interface><con:properties/><con:wssContainer/><con:sensitiveInformation/></con:soapui-project>
