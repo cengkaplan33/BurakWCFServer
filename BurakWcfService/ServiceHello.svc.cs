@@ -1,5 +1,6 @@
 ﻿using BurakWcfService.Air.AtlasJet.Service;
 using BurakWcfService.Air.Models;
+using BurakWcfService.Air.Pegasus.Service;
 using BurakWcfService.Air.SunExpress.Service;
 using BurakWcfService.Models;
 using System;
@@ -196,9 +197,15 @@ namespace BurakWcfService
             #region layer olarak çağrım
             {
 
-                SunExpress atlasjet = new SunExpress("","");
+                //SunExpress atlasjet = new SunExpress("","");
                 
-                var response = atlasjet.AvailabilityFightList(new Air.Services.AvailabilityFightListRequest() { });
+                //var response = atlasjet.AvailabilityFightList(new Air.Services.AvailabilityFightListRequest() { });
+
+
+                Pegasus pegasus = new Pegasus("", "");
+
+                var response = pegasus.AvailabilityFightList(new Air.Services.AvailabilityFightListRequest() { });
+
                 //if (response.Error == null)
                 //{
                 //    foreach (var flight in response.Entities)

@@ -269,6 +269,60 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
+    <Content Include="Service References\PegasusCraneOTAService\BurakWcfService.PegasusCraneOTAService.AvailabilityAndFaresResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\PegasusCraneOTAService\BurakWcfService.PegasusCraneOTAService.AvailabilityResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\PegasusCraneOTAService\BurakWcfService.PegasusCraneOTAService.BookingResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\PegasusCraneOTAService\BurakWcfService.PegasusCraneOTAService.CalculateServiceChargeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\PegasusCraneOTAService\BurakWcfService.PegasusCraneOTAService.CancelReservationResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\PegasusCraneOTAService\BurakWcfService.PegasusCraneOTAService.FareDisplayResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\PegasusCraneOTAService\BurakWcfService.PegasusCraneOTAService.OTA_AirAvailAndFaresRSType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\PegasusCraneOTAService\BurakWcfService.PegasusCraneOTAService.OTA_AirAvailRSType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\PegasusCraneOTAService\BurakWcfService.PegasusCraneOTAService.OTA_AirBookRSType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\PegasusCraneOTAService\BurakWcfService.PegasusCraneOTAService.OTA_AirFareDisplayRSType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\PegasusCraneOTAService\BurakWcfService.PegasusCraneOTAService.OTA_CancelRSType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\PegasusCraneOTAService\BurakWcfService.PegasusCraneOTAService.OTA_PingRSType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\PegasusCraneOTAService\BurakWcfService.PegasusCraneOTAService.OTA_ServiceChargeRSType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\PegasusCraneOTAService\BurakWcfService.PegasusCraneOTAService.PingResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\PegasusCraneOTAService\BurakWcfService.PegasusCraneOTAService.ReadReservationResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\PegasusCraneOTAService\BurakWcfService.PegasusCraneOTAService.TicketReservationResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Service References\PegasusCraneOTAService\configuration91.svcinfo" />
+    <None Include="Service References\PegasusCraneOTAService\configuration.svcinfo" />
+    <None Include="Service References\PegasusCraneOTAService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
     <Content Include="Service References\SunExpressServiceReference\BurakWcfService.SunExpressServiceReference.AvailabilityResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
@@ -305,6 +359,7 @@
     <Content Include="Service References\SunExpressServiceReference\BurakWcfService.SunExpressServiceReference.TicketReservationResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
+    <None Include="Service References\PegasusCraneOTAService\CraneOTAServiceV21.wsdl" />
     <None Include="Service References\SunExpressServiceReference\configuration91.svcinfo" />
     <None Include="Service References\SunExpressServiceReference\configuration.svcinfo" />
     <None Include="Service References\SunExpressServiceReference\Reference.svcmap">
@@ -398,6 +453,12 @@
   <ItemGroup>
     <Compile Include="Air\SunExpress\dsada.cs" />
     <Compile Include="Air\SunExpress\Services\Fare\SunExpress.cs" />
+    <Compile Include="Air\SunExpress\Services\Pegasus.cs" />
+    <Compile Include="Service References\PegasusCraneOTAService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <Compile Include="Service References\TestSunExpressServiceReference\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -528,6 +589,7 @@
     <WCFMetadataStorage Include="Service References\AtlasjetServiceReference\" />
     <WCFMetadataStorage Include="Service References\BoraJetServiceReference\" />
     <WCFMetadataStorage Include="Service References\OnurAirCraneOTAService\" />
+    <WCFMetadataStorage Include="Service References\PegasusCraneOTAService\" />
     <WCFMetadataStorage Include="Service References\SunExpressServiceReference\" />
     <WCFMetadataStorage Include="Service References\TestSunExpressServiceReference\" />
   </ItemGroup>
