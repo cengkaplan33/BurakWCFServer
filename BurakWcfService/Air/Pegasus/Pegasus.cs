@@ -13,7 +13,6 @@ using System.Xml.Serialization;
 
 namespace BurakWcfService.Air.Pegasus.Service
 {
-
     public class Common
     {
         public static class ConfigureBinding
@@ -93,6 +92,130 @@ namespace BurakWcfService.Air.Pegasus.Service
                 }
             };
         }
+
+        public static Dictionary<string, string[]> CityAirports = new Dictionary<string, string[]>
+		{
+			
+			{
+				"LON",
+				new string[]
+				{
+					"STN_LHR_LGW"
+				}
+			},
+			
+			{
+				"IST",
+				new string[]
+				{
+					"IST_SAW"
+				}
+			},
+			
+			{
+				"LYS",
+				new string[]
+				{
+					"LYS_EBU"
+				}
+			},
+			
+			{
+				"MIL",
+				new string[]
+				{
+					"BGY_MXP"
+				}
+			},
+			
+			{
+				"BAK",
+				new string[]
+				{
+					"GYD"
+				}
+			},
+			
+			{
+				"EAP",
+				new string[]
+				{
+					"BSL"
+				}
+			},
+			
+			{
+				"BER",
+				new string[]
+				{
+					"SXF"
+				}
+			},
+			
+			{
+				"BUH",
+				new string[]
+				{
+					"OTP"
+				}
+			},
+			
+			{
+				"FMY",
+				new string[]
+				{
+					"RSW"
+				}
+			},
+			
+			{
+				"PAR",
+				new string[]
+				{
+					"ORY"
+				}
+			},
+			
+			{
+				"ROM",
+				new string[]
+				{
+					"FCO"
+				}
+			},
+			
+			{
+				"STO",
+				new string[]
+				{
+					"ARN"
+				}
+			},
+			
+			{
+				"THR",
+				new string[]
+				{
+					"IKA"
+				}
+			},
+			
+			{
+				"BRU",
+				new string[]
+				{
+					"CRL"
+				}
+			},
+			
+			{
+				"MOW",
+				new string[]
+				{
+					"DME"
+				}
+			}
+		};
     }
 
     public class AddWseSecurityHeaderEndpointBehavior : IEndpointBehavior

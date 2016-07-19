@@ -451,9 +451,11 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Air\Common\FlightHelper.cs" />
+    <Compile Include="Air\Pegasus\AvailabilityHelper.cs" />
     <Compile Include="Air\SunExpress\dsada.cs" />
     <Compile Include="Air\SunExpress\Services\Fare\SunExpress.cs" />
-    <Compile Include="Air\SunExpress\Services\Pegasus.cs" />
+    <Compile Include="Air\Pegasus\Pegasus.cs" />
     <Compile Include="Service References\PegasusCraneOTAService\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

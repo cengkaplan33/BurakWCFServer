@@ -28,6 +28,7 @@ namespace BurakWcfService.Air.Models
         }
     }
 
+
     //enum FlightDirection
     //{
     //    //Tek Yön
@@ -39,4 +40,54 @@ namespace BurakWcfService.Air.Models
     //    //Gidiş-Dönüş Farklı Noktadan
     //    OPENJAW = "OPENJAW "
     //}
+
+
+
+    public sealed class PassengerType
+    {
+        public readonly String Name;
+        public readonly String Code;
+        public readonly int Value;
+
+        //ADT - Adult
+        //INF - Infant without a Seat
+        //Military - Asker
+        //Student
+        public static readonly PassengerType Adult = new PassengerType(1, "Adult", "ADL");
+        public static readonly PassengerType Child = new PassengerType(2, "Child", "CHL");
+        public static readonly PassengerType Infant = new PassengerType(3, "Infant", "INF");
+        public static readonly PassengerType Young = new PassengerType(4, "Young", "YNG");
+        public static readonly PassengerType Senior = new PassengerType(5, "Senior", "SRC");
+        public static readonly PassengerType Student = new PassengerType(10, "Student", "STU");
+        public static readonly PassengerType Military = new PassengerType(20, "Military", "MIL");
+
+        private PassengerType(int value, String name, string code)
+        {
+            this.Name = name;
+            this.Value = value;
+            this.Code = code;
+        }
+
+        //public override String ToString()
+        //{
+        //    return name;
+        //}
+    }
+
+    public sealed class FlightChargeType
+    {
+        private readonly String name;
+        private readonly String code;
+        private readonly int value;
+
+        public static readonly FlightChargeType Tax = new FlightChargeType(1, "Tax", "Tax");
+        public static readonly FlightChargeType Service = new FlightChargeType(2, "Service", "Service");
+
+        private FlightChargeType(int value, String name, string code)
+        {
+            this.name = name;
+            this.value = value;
+            this.code = code;
+        }
+    }
 }

@@ -1,9 +1,9 @@
-﻿using BurakWcfService.Air.Services;
+﻿//using BurakWcfService.Air.Services;
 
-namespace BurakWcfService.Air.SunExpress.Services
-{
-    public class FareListRequest : ListRequest
-    {
+//namespace BurakWcfService.Air.SunExpress.Services
+//{
+//    public class FareListRequest : ListRequest
+//    {
 
-    }
-}
+//    }
+//}
